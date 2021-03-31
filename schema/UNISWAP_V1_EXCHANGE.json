@@ -1,0 +1,13 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0xcd60aa75dea3072fbc07ae6d7d856b5dc5f4eee88854f5b4abf7b680ef8bc50f"
+		]
+	},
+	"meta": {
+		"name": "UNISWAP_V1_EXCHANGE",
+		"priority": 3
+	}
+}

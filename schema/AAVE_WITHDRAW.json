@@ -1,0 +1,13 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0xbd5034ffbd47e4e72a94baa2cdb74c6fad73cb3bcdc13036b72ec8306f5a7646"
+		]
+	},
+	"meta": {
+		"name": "AAVE_WITHDRAW",
+		"priority": 5
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0x1e77446728e5558aa1b7e81e0cdab9cc1b075ba893b740600c76a315c2caa553"
+		]
+	},
+	"meta": {
+		"name": "AAVE_BORROW",
+		"priority": 5
+	}
+}

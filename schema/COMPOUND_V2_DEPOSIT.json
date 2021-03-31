@@ -1,0 +1,16 @@
+{
+	"schema": {
+		"key": "logAddress",
+		"type": "addresses",
+		"addresses": [
+			"0x5d3a536e4d6dbd6114cc1ead35777bab948e3643"
+		],
+		"and": [
+			"ERC_20_MINT"
+		]
+	},
+	"meta": {
+		"name": "COMPOUND_V2_DEPOSIT",
+		"priority": 5
+	}
+}

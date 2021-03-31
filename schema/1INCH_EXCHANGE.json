@@ -1,0 +1,13 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0xe2cee3f6836059820b673943853afebd9b3026125dab0d774284e6f28a4855be"
+		]
+	},
+	"meta": {
+		"name": "1INCH_EXCHANGE",
+		"priority": 4
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0xb718f0b14f03d8c3adf35b15e3da52421b042ac879e5a689011a8b1e0036773d"
+		]
+	},
+	"meta": {
+		"name": "AAVE_REPAY",
+		"priority": 5
+	}
+}

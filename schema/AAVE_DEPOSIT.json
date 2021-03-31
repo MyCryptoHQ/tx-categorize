@@ -1,0 +1,13 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0xc12c57b1c73a2c3a2ea4613e9476abb3d8d146857aab7329e24243fb59710c82"
+		]
+	},
+	"meta": {
+		"name": "AAVE_DEPOSIT",
+		"priority": 5
+	}
+}

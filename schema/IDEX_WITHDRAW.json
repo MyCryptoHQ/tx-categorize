@@ -1,0 +1,13 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0xf341246adaac6f497bc2a656f546ab9e182111d630394f0c57c710a59a2cb567"
+		]
+	},
+	"meta": {
+		"name": "IDEX_WITHDRAW",
+		"priority": 4
+	}
+}

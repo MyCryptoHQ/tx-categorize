@@ -1,0 +1,13 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0xe5b754fb1abb7f01b499791d0b820ae3b6af3424ac1c59768edb53f4ec31a929"
+		]
+	},
+	"meta": {
+		"name": "COMPOUND_V2_WITHDRAW",
+		"priority": 5
+	}
+}

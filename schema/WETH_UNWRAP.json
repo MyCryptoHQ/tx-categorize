@@ -1,0 +1,13 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0x7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65"
+		]
+	},
+	"meta": {
+		"name": "WETH_UNWRAP",
+		"priority": 2
+	}
+}

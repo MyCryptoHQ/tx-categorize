@@ -1,0 +1,13 @@
+{ 
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0x442e715f626346e8c54381002da614f62bee8d27386535b2521ec8540898556e"
+		]
+	},
+	"meta": {
+		"name": "GNOSIS_SAFE_WITHDRAW",
+		"priority": 6
+	}
+}

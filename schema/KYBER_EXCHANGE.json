@@ -1,0 +1,14 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0x1849bd6a030a1bca28b83437fd3de96f3d27a5d172fa7e9c78e7b61468928a39",
+			"0x7f4091b46c33e918a0f3aa42307641d17bb67029427a5369e54b353984238705"
+		]
+	},
+	"meta": {
+		"name": "KYBER_EXCHANGE",
+		"priority": 3
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"schema": {
+		"key": "from",
+		"type": "addresses",
+		"addresses": [
+			"0x8fd00f170fdf3772c5ebdcd90bf257316c69ba45"
+		]
+	},
+	"meta": {
+		"name": "SPARKPOOL_MINING_PAYOUT",
+		"priority": 5
+	}
+}

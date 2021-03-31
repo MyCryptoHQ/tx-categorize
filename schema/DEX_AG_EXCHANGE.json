@@ -1,0 +1,13 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0x7d76860f120f877ecdc289aa48a7ccc6d0782d9fc59f154c29bc262b7f8308cc"
+		]
+	},
+	"meta": {
+		"name": "DEX_AG_EXCHANGE",
+		"priority": 4
+	}
+}

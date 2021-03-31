@@ -1,0 +1,14 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			""
+		]
+	},
+	"meta": {
+		"name": "",
+		"type": "",
+		"priority": 0
+	}
+}

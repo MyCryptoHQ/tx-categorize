@@ -1,0 +1,13 @@
+{ 
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0xf2a0eb156472d1440255b0d7c1e19cc07115d1051fe605b0dce69acfec884d9c"
+		]
+	},
+	"meta": {
+		"name": "GNOSIS_SAFE_APPROVE_TX",
+		"priority": 6
+	}
+}
