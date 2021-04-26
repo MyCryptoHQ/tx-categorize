@@ -11,6 +11,6 @@
 	},
 	"meta": {
 		"name": "COMPOUND_V2_DEPOSIT",
-		"priority": 5
+		"priority": 50
 	}
 }

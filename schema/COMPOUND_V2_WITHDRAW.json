@@ -8,6 +8,6 @@
 	},
 	"meta": {
 		"name": "COMPOUND_V2_WITHDRAW",
-		"priority": 5
+		"priority": 50
 	}
 }

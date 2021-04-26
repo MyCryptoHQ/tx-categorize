@@ -8,6 +8,6 @@
 	},
 	"meta": {
 		"name": "WETH_UNWRAP",
-		"priority": 2
+		"priority": 20
 	}
 }

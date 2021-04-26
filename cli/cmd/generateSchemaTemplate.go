@@ -10,7 +10,7 @@ import (
 )
 
 // generateTemplateCmd represents the generate-template command
-var generateTemplateCmd = &cobra.Command{
+var generateSchemaTemplateCmd = &cobra.Command{
 	Use:   "generate-template",
 	Short: "Generates a log topics-based schema template",
 	Run: func(cmd *cobra.Command, args []string) {
@@ -22,5 +22,5 @@ var generateTemplateCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(generateTemplateCmd)
+	rootCmd.AddCommand(generateSchemaTemplateCmd)
 }

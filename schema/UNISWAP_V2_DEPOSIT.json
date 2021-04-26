@@ -11,6 +11,6 @@
 	],
 	"meta": {
 		"name": "UNISWAP_V2_DEPOSIT",
-		"priority": 3
+		"priority": 30
 	}
 }

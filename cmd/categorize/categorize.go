@@ -2,14 +2,36 @@ package categorize
 
 import (
 	"encoding/hex"
+	"encoding/json"
 	"fmt"
+	"io/ioutil"
+	"log"
+	"os"
+	"path/filepath"
 	"sort"
 	"strings"
 
 	"github.com/ethereum/go-ethereum/common"
 	ethertypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/mycryptohq/tx-categorize/types"
+	"gopkg.in/src-d/go-git.v4"
 )
+
+type fileRecursion chan string
+
+var (
+	tempPath = "/tmp/repos/"
+)
+
+func (f fileRecursion) Walk(path string, info os.FileInfo, err error) error {
+	if err != nil {
+		return err
+	}
+	if !info.IsDir() {
+		f <- path
+	}
+	return nil
+}
 
 func contains(a []string, x string) bool {
 	for _, n := range a {
@@ -181,4 +203,71 @@ func convertFromHexByteToHexString(amount []byte) string {
 	copy(enc, "0x")
 	hex.Encode(enc[2:], trimmedAmt)
 	return string(enc)
+}
+
+func FetchAndWalkSchema(path string) ([]types.FullTxLabelSchema, error) {
+	var schemaList []types.FullTxLabelSchema
+	_, err := git.PlainClone(tempPath, false, &git.CloneOptions{
+		URL:      "https://github.com/mycryptohq/tx-categorize.git",
+		Progress: os.Stdout,
+	})
+	if err != nil {
+		log.Println(err)
+	}
+	walker := make(fileRecursion)
+	go func() {
+		if err := filepath.Walk(path, walker.Walk); err != nil {
+			log.Println("Error walking schemas", err)
+		}
+		close(walker)
+	}()
+
+	for path := range walker {
+		file, err := ioutil.ReadFile(path)
+		if err != nil {
+			log.Println("Failed opening file", path, err)
+			continue
+		}
+
+		obj := types.FullTxLabelSchema{}
+
+		err = json.Unmarshal(file, &obj)
+		if err != nil {
+			log.Fatal("errHere", err)
+		}
+		schemaList = append(schemaList, obj)
+	}
+	return schemaList, nil
+}
+
+func FormatNormalTxsToStandard(txs []types.ParsedStandardTx) []types.PreDeterminedStandardTx {
+	var formattedTxs []types.PreDeterminedStandardTx
+
+	for _, tx := range txs {
+		var status types.TxStatus
+
+		if txStatus := tx.Tx.TxReceiptStatus; txStatus == "1" {
+			status = types.SUCCESS
+		} else if txStatus == "0" {
+			status = types.FAILED
+		}
+		formattedTxs = append(formattedTxs, types.PreDeterminedStandardTx{
+			To:               tx.Tx.To,
+			From:             tx.Tx.From,
+			Value:            tx.Tx.Value,
+			GasUsed:          int(tx.GasUsed),
+			BlockNumber:      tx.Tx.BlockNumber,
+			TimeStamp:        tx.Tx.TimeStamp.Unix(),
+			GasLimit:         tx.Tx.Gas,
+			GasPrice:         tx.Tx.GasPrice,
+			Nonce:            tx.Tx.Nonce,
+			Status:           status,
+			Hash:             tx.Tx.Hash,
+			RecipientAddress: tx.Tx.To,
+			ContractAddress:  tx.Tx.ContractAddress,
+			Logs:             tx.Logs,
+			Data:             tx.Tx.Input,
+		})
+	}
+	return formattedTxs
 }

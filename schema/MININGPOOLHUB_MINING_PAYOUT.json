@@ -8,6 +8,6 @@
 	},
 	"meta": {
 		"name": "MININGPOOLHUB_MINING_PAYOUT",
-		"priority": 5
+		"priority": 50
 	}
 }

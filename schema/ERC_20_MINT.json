@@ -8,6 +8,6 @@
 	},
 	"meta": {
 		"name": "ERC_20_MINT",
-		"priority": 2
+		"priority": 20
 	}
 }

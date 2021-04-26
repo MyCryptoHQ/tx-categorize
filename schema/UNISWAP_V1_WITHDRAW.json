@@ -8,6 +8,6 @@
 	},
 	"meta": {
 		"name": "UNISWAP_V1_WITHDRAW",
-		"priority": 3
+		"priority": 30
 	}
 }

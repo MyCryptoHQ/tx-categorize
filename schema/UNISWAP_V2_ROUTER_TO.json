@@ -11,6 +11,6 @@
 	},
 	"meta": {
 		"name": "UNISWAP_V2_ROUTER_TO",
-		"priority": 1
+		"priority": 10
 	}
 }

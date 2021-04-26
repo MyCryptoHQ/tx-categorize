@@ -8,6 +8,6 @@
 	},
 	"meta": {
 		"name": "IDEX_WITHDRAW",
-		"priority": 4
+		"priority": 40
 	}
 }

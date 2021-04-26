@@ -8,6 +8,6 @@
 	},
 	"meta": {
 		"name": "COMPOUND_V2_BORROW",
-		"priority": 5
+		"priority": 50
 	}
 }

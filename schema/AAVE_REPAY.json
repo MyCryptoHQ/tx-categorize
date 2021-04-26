@@ -8,6 +8,6 @@
 	},
 	"meta": {
 		"name": "AAVE_REPAY",
-		"priority": 5
+		"priority": 50
 	}
 }
