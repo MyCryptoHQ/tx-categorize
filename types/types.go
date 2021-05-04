@@ -79,15 +79,15 @@ type ERC20Transfer struct {
 }
 
 type TxLabelMeta struct {
-	Name           string         `json:"name"`
-	Platform       Platform       `json:"platform"`
-	PlatformAction PlatformAction `json:"platformAction"`
-	Priority       int            `json:"priority"`
+	Name           string         `json:"name" validate:"required"`
+	Protocol       Protocol       `json:"protocol" validate:"required"`
+	ProtocolAction ProtocolAction `json:"type" validate:"required"`
+	Priority       *int           `json:"priority" validate:"required"`
 }
 
 type TxLabelSchema struct {
-	Key       string   `json:"key"`
-	Type      string   `json:"type"`
+	Key       string   `json:"key" validate:"required"`
+	Type      string   `json:"type" validate:"required"`
 	Addresses []string `json:"addresses"`
 	Topics    []string `json:"topics"`
 	And       []string `json:"and"`
@@ -95,7 +95,7 @@ type TxLabelSchema struct {
 }
 
 type FullTxLabelSchema struct {
-	Schema  TxLabelSchema `json:"schema"`
-	Meta    TxLabelMeta   `json:"meta"`
-	Version int           `json:"version"`
+	Schema TxLabelSchema `json:"schema" validate:"required"`
+	Meta   TxLabelMeta   `json:"meta" validate:"required"`
+	//Version string        `json:"version" validate:"required"`
 }

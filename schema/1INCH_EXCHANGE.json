@@ -8,6 +8,8 @@
 	},
 	"meta": {
 		"name": "1INCH_EXCHANGE",
-		"priority": 40
+		"priority": 40,
+		"type": "EXCHANGE",
+		"protocol": "1INCH"
 	}
 }

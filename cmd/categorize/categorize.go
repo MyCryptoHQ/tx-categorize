@@ -162,9 +162,9 @@ func interpretAppliedSchemas(applied map[string]types.FullTxLabelSchema) string 
 	}
 
 	for _, item := range applied {
-		if item.Meta.Priority > priority {
+		if *item.Meta.Priority > priority {
 			txType = item.Meta.Name
-			priority = item.Meta.Priority
+			priority = *item.Meta.Priority
 		}
 	}
 	return txType
@@ -172,7 +172,9 @@ func interpretAppliedSchemas(applied map[string]types.FullTxLabelSchema) string 
 
 func sortSchemaListByPriority(schemas []types.FullTxLabelSchema) []types.FullTxLabelSchema {
 	sort.Slice(schemas[:], func(i, j int) bool {
-		return schemas[i].Meta.Priority < schemas[j].Meta.Priority
+		prioOne := *schemas[i].Meta.Priority
+		prioTwo := *schemas[j].Meta.Priority
+		return prioOne < prioTwo
 	})
 	return schemas
 }

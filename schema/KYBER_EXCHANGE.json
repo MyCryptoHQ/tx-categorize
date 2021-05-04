@@ -9,6 +9,8 @@
 	},
 	"meta": {
 		"name": "KYBER_EXCHANGE",
-		"priority": 30
+		"priority": 30,
+		"type": "EXCHANGE",
+		"protocol": "KYBER"
 	}
 }

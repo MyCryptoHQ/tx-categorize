@@ -8,6 +8,8 @@
 	},
 	"meta": {
 		"name": "GNOSIS_SAFE_WITHDRAW",
-		"priority": 60
+		"priority": 60,
+		"type": "WITHDRAW",
+		"protocol": "GNOSIS_SAFE"
 	}
 }

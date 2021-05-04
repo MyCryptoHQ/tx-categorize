@@ -8,6 +8,8 @@
 	},
 	"meta": {
 		"name": "AAVE_BORROW",
-		"priority": 50
+		"priority": 50,
+		"type": "BORROW",
+		"protocol": "AAVE"
 	}
 }

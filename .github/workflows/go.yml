@@ -35,3 +35,6 @@ jobs:
   
     - name: Test services
       run: go vet ./...
+    
+    - name: Validate schema
+      run: cd cli && go build && ./cli validate-schema

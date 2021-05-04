@@ -8,6 +8,8 @@
 	},
 	"meta": {
 		"name": "AAVE_DEPOSIT",
-		"priority": 50
+		"priority": 50,
+		"type": "DEPOSIT",
+		"protocol": "AAVE"
 	}
 }

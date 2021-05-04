@@ -8,6 +8,8 @@
 	},
 	"meta": {
 		"name": "GNOSIS_SAFE_APPROVE_TX",
-		"priority": 60
+		"priority": 60,
+		"type": "APPROVE_TX",
+		"protocol": "GNOSIS_SAFE"
 	}
 }

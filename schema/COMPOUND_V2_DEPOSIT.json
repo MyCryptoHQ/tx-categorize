@@ -11,6 +11,8 @@
 	},
 	"meta": {
 		"name": "COMPOUND_V2_DEPOSIT",
-		"priority": 50
+		"priority": 50,
+		"type": "DEPOSIT",
+		"protocol": "COMPOUND"
 	}
 }

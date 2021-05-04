@@ -8,6 +8,8 @@
 	},
 	"meta": {
 		"name": "PARASWAP_EXCHANGE",
-		"priority": 30
+		"priority": 30,
+		"type": "EXCHANGE",
+		"protocol": "PARASWAP"
 	}
 }

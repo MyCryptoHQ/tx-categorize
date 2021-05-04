@@ -8,6 +8,8 @@
 	},
 	"meta": {
 		"name": "IDEX_DEPOSIT_ETH",
-		"priority": 40
+		"priority": 40,
+		"type": "DEPOSIT_ETH",
+		"protocol": "IDEX"
 	}
 }

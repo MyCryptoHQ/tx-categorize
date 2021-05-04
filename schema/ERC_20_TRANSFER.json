@@ -8,6 +8,8 @@
 	},
 	"meta": {
 		"name": "ERC_20_TRANSFER",
-		"priority": 20
+		"priority": 20,
+		"type": "TRANSFER",
+		"protocol": "ERC_20"
 	}
 }

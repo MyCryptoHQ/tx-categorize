@@ -12,6 +12,8 @@
 	],
 	"meta": {
 		"name": "UNISWAP_V2_EXCHANGE",
-		"priority": 40
+		"priority": 40,
+		"type": "EXCHANGE",
+		"protocol": "UNISWAP_V2"
 	}
 }

@@ -8,6 +8,8 @@
 	},
 	"meta": {
 		"name": "COMPOUND_V2_WITHDRAW",
-		"priority": 50
+		"priority": 50,
+		"type": "WITHDRAW",
+		"protocol": "COMPOUND"
 	}
 }

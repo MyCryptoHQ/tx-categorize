@@ -8,6 +8,8 @@
 	},
 	"meta": {
 		"name": "MININGPOOLHUB_MINING_PAYOUT",
-		"priority": 50
+		"priority": 50,
+		"type": "MINING_PAYOUT",
+		"protocol": "MININGPOOLHUB"
 	}
 }

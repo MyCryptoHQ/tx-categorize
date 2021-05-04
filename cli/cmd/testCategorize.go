@@ -36,10 +36,11 @@ var categorizeCmd = &cobra.Command{
 		var txs []types.StandardTx
 		for _, txConstruction := range formattedNormalTxs {
 			derivedTx, err := categorize.DetermineTxType(txConstruction, schemas)
-			txs = append(txs, derivedTx)
 			if err != nil {
 				log.Fatal(fmt.Errorf("failed to format tx %s", txConstruction.Hash))
 			}
+			fmt.Printf("%s categorized as: %s\n", txConstruction.Hash, derivedTx.TxType)
+			txs = append(txs, derivedTx)
 		}
 
 		file, _ := json.MarshalIndent(txs, "", "  ")

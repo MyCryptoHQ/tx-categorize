@@ -8,6 +8,8 @@
 	},
 	"meta": {
 		"name": "UNISWAP_V1_DEPOSIT",
-		"priority": 30
+		"priority": 30,
+		"type": "DEPOSIT",
+		"protocol": "UNISWAP_V1"
 	}
 }

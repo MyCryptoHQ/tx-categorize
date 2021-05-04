@@ -8,6 +8,8 @@
 	},
 	"meta": {
 		"name": "DEX_AG_EXCHANGE",
-		"priority": 40
+		"priority": 40,
+		"type": "EXCHANGE",
+		"protocol": "DEX_AG"
 	}
 }

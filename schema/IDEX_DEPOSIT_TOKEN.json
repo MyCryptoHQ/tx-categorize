@@ -11,6 +11,8 @@
 	},
 	"meta": {
 		"name": "IDEX_DEPOSIT_TOKEN",
-		"priority": 40
+		"priority": 40,
+		"type": "DEPOSIT_TOKEN",
+		"protocol": "IDEX"
 	}
 }

@@ -8,6 +8,8 @@
 	},
 	"meta": {
 		"name": "UNISWAP_V1_EXCHANGE",
-		"priority": 30
+		"priority": 30,
+		"type": "EXCHANGE",
+		"protocol": "UNISWAP_V1"
 	}
 }

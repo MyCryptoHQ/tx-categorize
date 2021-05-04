@@ -8,6 +8,8 @@
 	},
 	"meta": {
 		"name": "ERC_20_APPROVE",
-		"priority": 20
+		"priority": 20,
+		"type": "APPROVE",
+		"protocol": "ERC_20"
 	}
 }

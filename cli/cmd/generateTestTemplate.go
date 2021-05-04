@@ -1,13 +1,6 @@
 package cmd
 
 import (
-	"encoding/json"
-	"fmt"
-	"io/ioutil"
-	"log"
-
-	"github.com/mycryptohq/tx-categorize/cmd/build"
-	"github.com/mycryptohq/tx-categorize/common/etherclient"
 	"github.com/spf13/cobra"
 )
 
@@ -16,25 +9,27 @@ var generateTestTemplateCmd = &cobra.Command{
 	Use:   "generate-test-template",
 	Short: "Generates a test template based on an input tx hash",
 	Run: func(cmd *cobra.Command, args []string) {
-		rpcUrl, _ := cmd.Flags().GetString("rpc")
-		if rpcUrl == "" {
-			log.Fatal(fmt.Errorf("rpcUrl is required but not found"))
-		}
-		schemaId, _ := cmd.Flags().GetString("schemaId")
-		if schemaId == "" {
-			log.Fatal(fmt.Errorf("schemaId is required but not found"))
-		}
-		txHash, _ := cmd.Flags().GetString("txHash")
-		if txHash == "" {
-			log.Fatal(fmt.Errorf("txHash is required but not found"))
-		}
-		client := etherclient.MakeETHClient(rpcUrl)
-		txHashes := []string{txHash}
-		rec := build.FetchTxReceipts(txHashes, *client)
-		file, _ := json.MarshalIndent(rec, "", "  ")
-		fileLoc := fmt.Sprintf("../tests/test_txs/%s.json", schemaId)
-		_ = ioutil.WriteFile(fileLoc, file, 0644)
-		fmt.Println("A empty schema template file has been generated at", fileLoc)
+		// rpcUrl, _ := cmd.Flags().GetString("rpc")
+		// if rpcUrl == "" {
+		// 	log.Fatal(fmt.Errorf("rpcUrl is required but not found"))
+		// }
+		// schemaId, _ := cmd.Flags().GetString("schemaId")
+		// if schemaId == "" {
+		// 	log.Fatal(fmt.Errorf("schemaId is required but not found"))
+		// }
+		// txHash, _ := cmd.Flags().GetString("txHash")
+		// if txHash == "" {
+		// 	log.Fatal(fmt.Errorf("txHash is required but not found"))
+		// }
+		// client := etherclient.MakeETHClient(rpcUrl)
+		// txHashes := []string{txHash}
+		// txConstructions := build.FetchTxReceipts(txHashes, *client)
+		// formattedNormalTxs := categorize.FormatNormalTxsToStandard(txConstructions)
+		// schemas, _ := categorize.FetchAndWalkSchema("./../schema/")
+		// file, _ := json.MarshalIndent(rec, "", "  ")
+		// fileLoc := fmt.Sprintf("../tests/test_txs/%s.json", schemaId)
+		// _ = ioutil.WriteFile(fileLoc, file, 0644)
+		//fmt.Println("A empty schema template file has been generated at", fileLoc)
 	},
 }
 
