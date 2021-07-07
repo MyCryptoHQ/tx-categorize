@@ -16,29 +16,22 @@ var listUniqueTypesCmd = &cobra.Command{
 		schemas, _ := categorize.FetchAndWalkSchema("./../schema/")
 		typesMap := make(map[string]int)
 		protocolsMap := make(map[string]int)
-		//var types []string
-		//var protocols []string
 		for _, schema := range schemas {
-			//if string(schema.Meta.ProtocolAction) != "" {
-			typesMap[string(schema.Meta.ProtocolAction)] += 1
-			//}
+			if string(schema.Meta.ProtocolAction) != "" {
+				typesMap[string(schema.Meta.ProtocolAction)] += 1
+			} else {
+				fmt.Println("Missing type in:", schema.Meta.Name)
+			}
 
-			//if string(schema.Meta.Protocol) != "" {
-			protocolsMap[string(schema.Meta.Protocol)] += 1
-			//}
+			if string(schema.Meta.Protocol) != "" {
+				protocolsMap[string(schema.Meta.Protocol)] += 1
+			} else {
+				fmt.Println("Missing protocol in:", schema.Meta.Name)
+			}
 		}
-		// for protocol, _ := range protocolsMap {
-		// 	protocols = append(protocols, protocol)
-		// }
-
-		// for t, _ := range typesMap {
-		// 	types = append(types, t)
-		// }
-		//sort.Strings(protocolsMap)
 		protocolsJson, _ := json.MarshalIndent(protocolsMap, "", "  ")
 		fmt.Println("Protocols & instances:", string(protocolsJson))
 
-		//sort.Strings(types)
 		typesJson, _ := json.MarshalIndent(typesMap, "", "  ")
 		fmt.Println("Types & instances:", string(typesJson))
 	},

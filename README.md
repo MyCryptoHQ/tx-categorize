@@ -6,8 +6,11 @@ tx-categorize is a tool to parse & auto-categorize Ethereum transactions based o
 ### Todos:
 - [ ] Add commands:
 - - [x] Generate schema template
-- - [ ] Generate test from schema
+- - [x] Generate tests from schemaid and tx hash
 - - [x] List all unique schema types
 - - [x] Run a test attempt of categorizing a tx
 - - [x] Validate a schema
-- - [ ] Create a schema based on a subgraph
+- - [ ] Create schemas based on subgraphs
+- [ ] Create build ci to auto-update the s3 storage of schemas
+- [ ] Make a cmd to fetch schema obj and use
+- [ ] Write documentation on tx-categorize process and schema outline

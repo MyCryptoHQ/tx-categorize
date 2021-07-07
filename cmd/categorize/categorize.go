@@ -87,7 +87,7 @@ func DetermineTxType(tx types.PreDeterminedStandardTx, schemaList []types.FullTx
 		GasPrice:         fmt.Sprintf("%#x", tx.GasPrice),
 		Status:           tx.Status,
 		Nonce:            fmt.Sprintf("%#x", tx.Nonce),
-		ERC20Transfers:   ExtractERC20Transfers(tx.Logs),
+		ERC20Transfers:   extractERC20Transfers(tx.Logs),
 		RecipientAddress: tx.RecipientAddress,
 		Hash:             tx.Hash,
 		TxType:           txTypeDerived,
@@ -179,7 +179,7 @@ func sortSchemaListByPriority(schemas []types.FullTxLabelSchema) []types.FullTxL
 	return schemas
 }
 
-func ExtractERC20Transfers(logs []*ethertypes.Log) []types.ERC20Transfer {
+func extractERC20Transfers(logs []*ethertypes.Log) []types.ERC20Transfer {
 	transfers := []types.ERC20Transfer{}
 	for _, log := range logs {
 		if log.Topics[0] == common.HexToHash("0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef") {
@@ -227,7 +227,7 @@ func FetchAndWalkSchema(path string) ([]types.FullTxLabelSchema, error) {
 	for path := range walker {
 		file, err := ioutil.ReadFile(path)
 		if err != nil {
-			log.Println("Failed opening file", path, err)
+			log.Println("Failed opening file ", path, err)
 			continue
 		}
 
@@ -235,7 +235,7 @@ func FetchAndWalkSchema(path string) ([]types.FullTxLabelSchema, error) {
 
 		err = json.Unmarshal(file, &obj)
 		if err != nil {
-			log.Fatal("errHere", err)
+			log.Fatal("Failed unmarshalling schema objects ~ ", err, " in path: ", path)
 		}
 		schemaList = append(schemaList, obj)
 	}

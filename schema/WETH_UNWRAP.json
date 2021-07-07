@@ -8,7 +8,7 @@
 	},
 	"meta": {
 		"name": "WETH_UNWRAP",
-		"priority": 20,
+		"priority": 21,
 		"type": "UNWRAP",
 		"protocol": "ERC_20"
 	}
