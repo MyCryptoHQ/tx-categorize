@@ -26,6 +26,7 @@ require (
 	github.com/spf13/viper v1.7.1
 	github.com/status-im/keycard-go v0.0.0-20200402102358-957c09536969 // indirect
 	github.com/tyler-smith/go-bip39 v1.1.0 // indirect
+	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
 	gopkg.in/go-playground/validator.v9 v9.31.0
 	gopkg.in/olebedev/go-duktape.v3 v3.0.0-20210326210528-650f7c854440 // indirect
 	gopkg.in/src-d/go-git.v4 v4.13.1
