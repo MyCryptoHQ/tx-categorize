@@ -12,7 +12,7 @@ import (
 	"github.com/mycryptohq/tx-categorize/common/etherclient"
 )
 
-func Test_Schemas(t *testing.T) { // @todo: replace with replacement test name
+func Test_Schemas(t *testing.T) {
 	rpcUrl := os.Getenv("rpcUrl")
 	if rpcUrl == "" {
 		fmt.Printf("[Test_Schemas]: env variable 'rpcUrl' is required but not found\n")
