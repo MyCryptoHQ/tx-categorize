@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -12,6 +13,8 @@ import (
 var (
 	testsDir = "../tests"
 )
+
+type TestList map[string]string
 
 // generateTemplateCmd represents the generate-template command
 var generateTestTemplateCmd = &cobra.Command{
@@ -27,17 +30,21 @@ var generateTestTemplateCmd = &cobra.Command{
 			log.Fatal(fmt.Errorf("txHash is required but not found"))
 		}
 
-		exampleTestFileLoc := testsDir + "/example_test.txt"
-		exampleTestReader, err := ioutil.ReadFile(exampleTestFileLoc)
+		testListFileLoc := testsDir + "/testList.json"
+		testList, err := ioutil.ReadFile(testListFileLoc)
 		if err != nil {
-			log.Fatal(fmt.Errorf("could not read example_test.txt file at %s", exampleTestFileLoc))
+			log.Fatal(fmt.Errorf("could not read example_test.txt file at %s", testListFileLoc))
 		}
+		var testListObj TestList
 
-		finishedTestFile := setupTestFile(string(exampleTestReader), schemaId, txHash)
-
-		fileLoc := fmt.Sprintf(testsDir+"/%s_test.go", schemaId)
-		_ = ioutil.WriteFile(fileLoc, []byte(finishedTestFile), 0644)
-		fmt.Println("A empty schema test file has been generated at", fileLoc)
+		err = json.Unmarshal(testList, &testListObj)
+		if err != nil {
+			log.Fatal(fmt.Errorf("could not unmarshal testlist"))
+		}
+		testListObj[schemaId] = txHash
+		newTestList, _ := json.MarshalIndent(testListObj, " ", "   ")
+		_ = ioutil.WriteFile(testListFileLoc, newTestList, 0644)
+		fmt.Printf("A new test config has been written to %s for schema %s\n", testListFileLoc, schemaId)
 	},
 }
 
