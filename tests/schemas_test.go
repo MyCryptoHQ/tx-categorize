@@ -30,6 +30,10 @@ func Test_Schemas(t *testing.T) { // @todo: replace with replacement test name
 		t.Errorf("[Test_Schemas]: Failed to unmarshal testlist")
 	}
 	client := etherclient.MakeETHClient(rpcUrl)
+	schemas, _ := categorize.FetchAndWalkSchema("../schema/")
+	if len(testList) != len(schemas) {
+		fmt.Printf("[Test_Schemas]: There are %v untested schemas\n", len(schemas)-len(testList))
+	}
 	for schemaId, txHash := range testList {
 		txHashes := []string{txHash}
 		txConstructions := build.FetchTxReceipts(txHashes, *client)
@@ -37,7 +41,7 @@ func Test_Schemas(t *testing.T) { // @todo: replace with replacement test name
 			t.Errorf("[Key_Derivation_Test_%s]: Failed to fetch tx from node %s", schemaId, txHash)
 		}
 		txConstruction := categorize.FormatNormalTxsToStandard(txConstructions)[0]
-		schemas, _ := categorize.FetchAndWalkSchema("../schema/")
+
 		derivedTx, err := categorize.DetermineTxType(txConstruction, schemas)
 		if err != nil {
 			t.Errorf("[Key_Derivation_Test_%s]: Failed to format tx %s", schemaId, txConstruction.Hash)
