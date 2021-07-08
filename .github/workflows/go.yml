@@ -2,17 +2,17 @@ name: Go
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
-
   build:
     name: Build
     runs-on: ubuntu-latest
+    env:
+      rpcUrl: https://api.mycryptoapi.com/eth
     steps:
-
     - name: Set up Go 1.15
       uses: actions/setup-go@v1
       with:
