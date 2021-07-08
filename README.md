@@ -3,6 +3,11 @@
 ### Description
 tx-categorize is a tool to parse & auto-categorize Ethereum transactions based on some schema-defined traits.
 
+
+### CLI
+The cli tool is used to improve the processes of adding / updating / monitoring schemas and their test configs.
+
+
 ### Todos:
 - [x] Add commands:
 - - [x] Generate schema template
@@ -14,3 +19,5 @@ tx-categorize is a tool to parse & auto-categorize Ethereum transactions based o
 - [ ] Create build ci to auto-update the s3 storage of schemas
 - [ ] Make a cmd to fetch schema obj and use
 - [ ] Write documentation on tx-categorize process and schema outline
+- [ ] Add new tx types & schemas
+
