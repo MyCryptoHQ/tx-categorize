@@ -37,4 +37,4 @@ jobs:
         args: --acl public-read --cache-control max-age=0 --follow-symlinks --delete --exclude '.git/*'
       env:
         DEST_DIR: 'api/v1/schemas.json'
-        SOURCE_DIR: '/tmp/schemas.json'
+        SOURCE_DIR: 'tmp/schemas.json'
