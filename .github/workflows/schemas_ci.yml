@@ -1,0 +1,40 @@
+name: Schema File CI
+
+env:
+  AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_MYCRYPTOAPI }}
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_MYCRYPTOAPI }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_MYCRYPTOAPI }}
+  AWS_REGION: 'us-east-1'
+
+on:
+  pull_request:
+    branches:
+      - '*'
+  push:
+    branches:
+      - master
+
+jobs:
+  build-schema-file:
+    name: Build schema file
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Go 1.15
+      uses: actions/setup-go@v1
+      with:
+        go-version: 1.15
+      id: go
+
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@v2
+
+    - name: Build combined schemas file
+      run: go run ./scripts/buildSchemasFile.go
+
+    - name: S3 Sync - Schema File Sync
+      uses: jakejarvis/s3-sync-action@v0.5.1
+      with:
+        args: --acl public-read --cache-control max-age=0 --follow-symlinks --delete --exclude '.git/*'
+      env:
+        DEST_DIR: 'api/v1/schemas.json'
+        SOURCE_DIR: '/tmp/schemas.json'
