@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	tempSchemasFilePath = __dirname + "tmp/schemas.json"
+	tempSchemasFilePath = "./tmp/schemas.json"
 )
 
 type SchemaMeta struct {
