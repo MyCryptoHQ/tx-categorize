@@ -28,6 +28,9 @@ jobs:
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
 
+    - name: Make output directory
+      run: mkdir tmp && touch ./tmp/schemas.json
+
     - name: Build combined schemas file
       run: go run ./scripts/buildSchemasFile.go
 
