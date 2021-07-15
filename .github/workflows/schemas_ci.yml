@@ -37,7 +37,7 @@ jobs:
     - name: S3 Sync - Schema File Sync
       uses: jakejarvis/s3-sync-action@v0.5.1
       with:
-        args: --acl public-read --cache-control max-age=0 --follow-symlinks --delete --exclude '.git/*'
+        args: --acl public-read --cache-control max-age=0 --follow-symlinks --exclude '.git/*'
       env:
         DEST_DIR: 'api/v1'
         SOURCE_DIR: 'tmp'
