@@ -9,7 +9,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// generateTemplateCmd represents the generate-template command
+// generateSchemaTemplateCmd represents the generate-template command
 var generateSchemaTemplateCmd = &cobra.Command{
 	Use:   "generate-template",
 	Short: "Generates a log topics-based schema template",

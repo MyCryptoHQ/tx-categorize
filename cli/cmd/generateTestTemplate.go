@@ -16,7 +16,7 @@ var (
 
 type TestList map[string]string
 
-// generateTemplateCmd represents the generate-template command
+// generateTemplateCmd represents the generate-test-template command
 var generateTestTemplateCmd = &cobra.Command{
 	Use:   "generate-test-template",
 	Short: "Generates a test template based on an input tx hash",

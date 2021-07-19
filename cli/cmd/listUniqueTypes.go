@@ -8,7 +8,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// generateTemplateCmd represents the generate-template command
+// listUniqueTypesCmd represents the list-unique-types command
 var listUniqueTypesCmd = &cobra.Command{
 	Use:   "list-unique-types",
 	Short: "Lists unique types and protocols",
