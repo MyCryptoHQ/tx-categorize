@@ -4,12 +4,14 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+
 	"github.com/mycryptohq/tx-categorize/cmd/categorize"
 	"github.com/mycryptohq/tx-categorize/types"
 )
 
 var (
-	tempSchemasFilePath = "./tmp/schemas.json"
+	tempSchemasFilePath     = "./tmp/schemas.json"
+	tempFullSchemasFilePath = "./tmp/fullschemas.json"
 )
 
 type SchemaMeta struct {
@@ -28,13 +30,18 @@ func main() {
 	schemaMetaMap := make(map[string]SchemaMeta)
 	for _, fullSchema := range schemas {
 		schemaMetaMap[fullSchema.Meta.Name] = SchemaMeta{
-			Protocol: fullSchema.Meta.Protocol,
+			Protocol:       fullSchema.Meta.Protocol,
 			ProtocolAction: fullSchema.Meta.ProtocolAction,
 		}
 	}
-	schemasFile,_ := json.MarshalIndent(schemaMetaMap, " ", "   ")
+	schemasFile, _ := json.MarshalIndent(schemaMetaMap, " ", "   ")
 	err = ioutil.WriteFile(tempSchemasFilePath, schemasFile, 0644)
 	if err != nil {
 		fmt.Println("[buildSchemasFile]: can't write schema file", err)
+	}
+	schemasArrFile, _ := json.MarshalIndent(schemas, " ", "   ")
+	err = ioutil.WriteFile(tempFullSchemasFilePath, schemasArrFile, 0644)
+	if err != nil {
+		fmt.Println("[buildSchemasFile]: can't write full schemas file", err)
 	}
 }
