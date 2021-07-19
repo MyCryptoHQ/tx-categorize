@@ -13,7 +13,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// generateTemplateCmd represents the generate-template command
+// categorizeCmd represents the categorize command
 var categorizeCmd = &cobra.Command{
 	Use:   "categorize",
 	Short: "Categorizes a tx using txhash as parameter",

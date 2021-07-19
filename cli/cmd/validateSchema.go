@@ -8,7 +8,7 @@ import (
 	"gopkg.in/go-playground/validator.v9"
 )
 
-// generateTemplateCmd represents the generate-template command
+// validateSchemaCmd represents the validate-schema command
 var validateSchemaCmd = &cobra.Command{
 	Use:   "validate-schema",
 	Short: "Fetches and validates schema files",

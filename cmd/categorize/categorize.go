@@ -214,12 +214,12 @@ func FetchAndWalkSchema(path string) ([]types.FullTxLabelSchema, error) {
 		Progress: os.Stdout,
 	})
 	if err != nil {
-		log.Println(err)
+		log.Println("[FetchAndWalkSchema]: Error cloning git", err)
 	}
 	walker := make(fileRecursion)
 	go func() {
 		if err := filepath.Walk(path, walker.Walk); err != nil {
-			log.Println("Error walking schemas", err)
+			log.Println("[FetchAndWalkSchema]: Error walking schemas", err)
 		}
 		close(walker)
 	}()
@@ -227,7 +227,7 @@ func FetchAndWalkSchema(path string) ([]types.FullTxLabelSchema, error) {
 	for path := range walker {
 		file, err := ioutil.ReadFile(path)
 		if err != nil {
-			log.Println("Failed opening file ", path, err)
+			log.Println("[FetchAndWalkSchema]: Failed opening file ", path, err)
 			continue
 		}
 
@@ -235,7 +235,7 @@ func FetchAndWalkSchema(path string) ([]types.FullTxLabelSchema, error) {
 
 		err = json.Unmarshal(file, &obj)
 		if err != nil {
-			log.Fatal("Failed unmarshalling schema objects ~ ", err, " in path: ", path)
+			log.Fatal("[FetchAndWalkSchema]: Failed unmarshalling schema objects ~ ", err, " in path: ", path)
 		}
 		schemaList = append(schemaList, obj)
 	}
