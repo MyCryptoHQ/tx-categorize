@@ -16,8 +16,7 @@ The cli tool is used to improve the processes of adding / updating / monitoring 
 - - [x] Run a test attempt of categorizing a tx
 - - [x] Validate a schema
 - - [ ] Create schemas based on subgraphs (_optional_)
-- [ ] Create build ci to auto-update the s3 storage of schemas
-- [ ] Make a cmd to fetch schema obj and use
+- [x] Create build ci to auto-update the s3 storage of schemas
 - [ ] Write documentation on tx-categorize process and schema outline
 - [ ] Add new tx types & schemas
 
