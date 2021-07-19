@@ -235,7 +235,8 @@ func FetchAndWalkSchema(path string) ([]types.FullTxLabelSchema, error) {
 
 		err = json.Unmarshal(file, &obj)
 		if err != nil {
-			log.Fatal("[FetchAndWalkSchema]: Failed unmarshalling schema objects ~ ", err, " in path: ", path)
+			log.Println("[FetchAndWalkSchema]: Failed unmarshalling schema objects ~ ", err, " in path: ", path)
+			continue
 		}
 		schemaList = append(schemaList, obj)
 	}

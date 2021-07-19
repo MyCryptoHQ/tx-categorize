@@ -37,23 +37,28 @@ func FetchTxReceipts(txHashes []string, ethclient ethclient.Client) []types.Pars
 func fetchTxReceipt(txHash string, ethclient ethclient.Client, ch chan types.ParsedStandardTx, wg *sync.WaitGroup) {
 	blockNumber, err := ethclient.HeaderByNumber(context.Background(), nil)
 	if err != nil {
-		log.Fatal("[fetchTxReceipt]: Couldn't fetch block number from node ", txHash, ". Err: ", err)
+		log.Println("[fetchTxReceipt]: Couldn't fetch block number from node ", txHash, ". Err: ", err)
+		wg.Done()
 	}
 	txReceipt, err := ethclient.TransactionReceipt(context.Background(), common.HexToHash(txHash))
 	if err != nil {
-		log.Fatal("[fetchTxReceipt]: Couldn't fetch txReceipt from node ", txHash, ". Err: ", err)
+		log.Println("[fetchTxReceipt]: Couldn't fetch txReceipt from node ", txHash, ". Err: ", err)
+		wg.Done()
 	}
 	tx, _, err := ethclient.TransactionByHash(context.Background(), common.HexToHash(txHash))
 	if err != nil {
-		log.Fatal("[fetchTxReceipt]: Couldn't fetch transaction from node ", txHash, ". Err: ", err)
+		log.Println("[fetchTxReceipt]: Couldn't fetch transaction from node ", txHash, ". Err: ", err)
+		wg.Done()
 	}
 	block, err := ethclient.BlockByHash(context.Background(), txReceipt.BlockHash)
 	if err != nil {
-		log.Fatal("[fetchTxReceipt]: Couldn't fetch block from node ", txReceipt.BlockHash, ". Err: ", err)
+		log.Println("[fetchTxReceipt]: Couldn't fetch block from node ", txReceipt.BlockHash, ". Err: ", err)
+		wg.Done()
 	}
 	sender, err := ethclient.TransactionSender(context.Background(), tx, txReceipt.BlockHash, txReceipt.TransactionIndex)
 	if err != nil {
-		log.Fatal("[fetchTxReceipt]: Couldn't fetch sender from node ", txReceipt.BlockHash, ". Err: ", err)
+		log.Println("[fetchTxReceipt]: Couldn't fetch sender from node ", txReceipt.BlockHash, ". Err: ", err)
+		wg.Done()
 	}
 	blockTime := block.Time()
 	// push the standard tx object down the channel
