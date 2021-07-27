@@ -22,7 +22,7 @@ type SchemaMeta struct {
 type SchemaMetaMap map[string]SchemaMeta
 
 func main() {
-	schemas, err := categorize.FetchAndWalkSchema()
+	schemas, err := categorize.FetchAndWalkSchema(true)
 	if err != nil {
 		fmt.Println("[buildSchemasFile]: error fetching schema", err)
 		return
