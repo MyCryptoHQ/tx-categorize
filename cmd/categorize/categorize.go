@@ -78,6 +78,8 @@ func DetermineTxType(tx types.PreDeterminedStandardTx, schemaList []types.FullTx
 	}
 
 	txTypeDerived := interpretAppliedSchemas(appliedSchemas)
+	app, _ := json.Marshal(appliedSchemas)
+	fmt.Println("Hash: ", tx.Hash, " types: ", string(app), "derived: ", txTypeDerived)
 	return types.StandardTx{
 		To:               tx.To,
 		From:             tx.From,
@@ -175,6 +177,9 @@ func interpretAppliedSchemas(applied map[string]types.FullTxLabelSchema) string 
 	}
 
 	for _, item := range applied {
+		if item.Meta.ExcludeFromBuild {
+			continue
+		}
 		if *item.Meta.Priority > priority {
 			txType = item.Meta.Name
 			priority = *item.Meta.Priority
