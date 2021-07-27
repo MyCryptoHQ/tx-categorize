@@ -1,0 +1,18 @@
+{
+	"schema": {
+		"key": "methodID",
+		"type": "methodID",
+		"methodID": [
+			"0xe3dec8fb"
+		],
+        "and": [
+            "TO_POLYGON_BRIDGE"
+        ]
+	},
+	"meta": {
+		"name": "POLYGON_BRIDGE_IN",
+		"priority": 30,
+		"type": "BRIDGE_IN",
+		"protocol": "POLYGON"
+	}
+}

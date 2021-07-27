@@ -56,9 +56,10 @@ func DetermineTxType(tx types.PreDeterminedStandardTx, schemaList []types.FullTx
 			listToUse = schema.Addresses
 		case "statuses":
 			listToUse = schema.Statuses
+		case "methodID":
+			listToUse = schema.MethodID
 		}
 		if handleBaseKeys(tx, schema.Key, listToUse) {
-
 			if len(schemaItem.Schema.And) != 0 {
 				if otherRequirementsPresent(appliedSchemas, schemaItem.Schema.And) {
 					appliedSchemas[schemaItem.Meta.Name] = schemaItem
@@ -108,6 +109,8 @@ func handleBaseKeys(tx types.PreDeterminedStandardTx, key string, referenceList 
 		return handleLogTopics(tx, referenceList)
 	case "logAddress":
 		return handleLogAddress(tx, referenceList)
+	case "methodID":
+		return handleMethodID(tx, referenceList)
 	}
 	return false
 }
@@ -138,6 +141,15 @@ func handleStatus(tx types.PreDeterminedStandardTx, statuses []string) bool {
 func handleLogAddress(tx types.PreDeterminedStandardTx, logAddresses []string) bool {
 	for _, log := range tx.Logs {
 		if contains(logAddresses, log.Address.String()) {
+			return true
+		}
+	}
+	return false
+}
+
+func handleMethodID(tx types.PreDeterminedStandardTx, methodIDs []string) bool {
+	for _, methodID := range methodIDs {
+		if strings.Contains(tx.Data, methodID) {
 			return true
 		}
 	}
@@ -208,7 +220,7 @@ func convertFromHexByteToHexString(amount []byte) string {
 	return string(enc)
 }
 
-func FetchAndWalkSchema() ([]types.FullTxLabelSchema, error) {
+func FetchAndWalkSchema(useLocal bool) ([]types.FullTxLabelSchema, error) {
 	var schemaList []types.FullTxLabelSchema
 	_, err := git.PlainClone(tempPath, false, &git.CloneOptions{
 		URL:      "https://github.com/mycryptohq/tx-categorize.git",
@@ -218,8 +230,15 @@ func FetchAndWalkSchema() ([]types.FullTxLabelSchema, error) {
 		log.Println("[FetchAndWalkSchema]: Error cloning git", err)
 	}
 	walker := make(fileRecursion)
+	var schemaPath string
+	if useLocal {
+		path, _ := os.Getwd()
+		schemaPath = path + "/../schema"
+	} else {
+		schemaPath = schemasPath
+	}
 	go func() {
-		if err := filepath.Walk(schemasPath, walker.Walk); err != nil {
+		if err := filepath.Walk(schemaPath, walker.Walk); err != nil {
 			log.Println("[FetchAndWalkSchema]: Error walking schemas", err)
 		}
 		close(walker)

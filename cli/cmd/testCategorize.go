@@ -32,7 +32,7 @@ var categorizeCmd = &cobra.Command{
 		txHashes := []string{txHash}
 		txConstructions := build.FetchTxReceipts(txHashes, *client)
 		formattedNormalTxs := categorize.FormatNormalTxsToStandard(txConstructions)
-		schemas, err := categorize.FetchAndWalkSchema()
+		schemas, err := categorize.FetchAndWalkSchema(true)
 		if err != nil {
 			fmt.Println("Error fetching schemas: ", err)
 		}

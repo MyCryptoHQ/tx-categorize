@@ -27,20 +27,25 @@ func main() {
 		fmt.Println("[buildSchemasFile]: error fetching schema", err)
 		return
 	}
+	var fullSchemas []types.FullTxLabelSchema
 	schemaMetaMap := make(map[string]SchemaMeta)
 	for _, fullSchema := range schemas {
+		if fullSchema.Meta.ExcludeFromBuild {
+			continue
+		}
 		schemaMetaMap[fullSchema.Meta.Name] = SchemaMeta{
 			Protocol:       fullSchema.Meta.Protocol,
 			ProtocolAction: fullSchema.Meta.ProtocolAction,
 		}
+		fullSchemas = append(fullSchemas, fullSchema)
 	}
 	schemasFile, _ := json.MarshalIndent(schemaMetaMap, " ", "   ")
 	err = ioutil.WriteFile(tempSchemasFilePath, schemasFile, 0644)
 	if err != nil {
 		fmt.Println("[buildSchemasFile]: can't write schema file", err)
 	}
-	schemasArrFile, _ := json.MarshalIndent(schemas, " ", "   ")
-	err = ioutil.WriteFile(tempFullSchemasFilePath, schemasArrFile, 0644)
+	fullSchemasFile, _ := json.MarshalIndent(fullSchemas, " ", "   ")
+	err = ioutil.WriteFile(tempFullSchemasFilePath, fullSchemasFile, 0644)
 	if err != nil {
 		fmt.Println("[buildSchemasFile]: can't write full schemas file", err)
 	}
