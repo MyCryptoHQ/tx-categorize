@@ -69,12 +69,21 @@ func DetermineTxType(tx types.PreDeterminedStandardTx, schemaList []types.FullTx
 			}
 		}
 	}
-	if len(appliedSchemas) == 0 {
-		if tx.Data == "0x" {
-			appliedSchemas["STANDARD"] = types.FullTxLabelSchema{}
-		} else {
-			appliedSchemas["GENERIC_CONTRACT_CALL"] = types.FullTxLabelSchema{}
+
+	// if erc_20_transfer is applied, but tx is actually an unknown contract interaction, specify it as generic_contract_call
+	if ercSchema, ok := appliedSchemas["ERC_20_TRANSFER"]; ok && tx.Data != "0x" && len(appliedSchemas) == 1 && !isERC20TransferOnly(tx.Data) {
+		erc20TransferPriority := *ercSchema.Meta.Priority
+		higherPriority := erc20TransferPriority + 1
+		appliedSchemas["GENERIC_CONTRACT_CALL"] = types.FullTxLabelSchema{
+			Schema: types.TxLabelSchema{},
+			Meta: types.TxLabelMeta{
+				Priority: &higherPriority,
+			},
 		}
+	}
+
+	if len(appliedSchemas) == 0 && tx.Data == "0x" {
+		appliedSchemas["STANDARD"] = types.FullTxLabelSchema{}
 	}
 
 	txTypeDerived := interpretAppliedSchemas(appliedSchemas)
@@ -186,6 +195,11 @@ func interpretAppliedSchemas(applied map[string]types.FullTxLabelSchema) string 
 		}
 	}
 	return txType
+}
+
+// Checks if data field contains the erc20 transfer methodID
+func isERC20TransferOnly(dataField string) bool {
+	return strings.Contains(dataField, "0xa9059cbb")
 }
 
 func sortSchemaListByPriority(schemas []types.FullTxLabelSchema) []types.FullTxLabelSchema {
