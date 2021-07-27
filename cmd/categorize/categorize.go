@@ -20,7 +20,8 @@ import (
 type fileRecursion chan string
 
 var (
-	tempPath = "/tmp/repos/"
+	tempPath    = "/tmp/repos/"
+	schemasPath = tempPath + "schema/"
 )
 
 func (f fileRecursion) Walk(path string, info os.FileInfo, err error) error {
@@ -207,7 +208,7 @@ func convertFromHexByteToHexString(amount []byte) string {
 	return string(enc)
 }
 
-func FetchAndWalkSchema(path string) ([]types.FullTxLabelSchema, error) {
+func FetchAndWalkSchema() ([]types.FullTxLabelSchema, error) {
 	var schemaList []types.FullTxLabelSchema
 	_, err := git.PlainClone(tempPath, false, &git.CloneOptions{
 		URL:      "https://github.com/mycryptohq/tx-categorize.git",
@@ -218,7 +219,7 @@ func FetchAndWalkSchema(path string) ([]types.FullTxLabelSchema, error) {
 	}
 	walker := make(fileRecursion)
 	go func() {
-		if err := filepath.Walk(path, walker.Walk); err != nil {
+		if err := filepath.Walk(schemasPath, walker.Walk); err != nil {
 			log.Println("[FetchAndWalkSchema]: Error walking schemas", err)
 		}
 		close(walker)
