@@ -1,0 +1,16 @@
+{
+	"schema": {
+		"key": "to",
+		"type": "addresses",
+		"addresses": [
+			"0xa0c68c638235ee32657e8f720a23cec1bfc77c77"
+		]
+	},
+	"meta": {
+		"name": "TO_POLYGON_BRIDGE",
+		"priority": 20,
+		"type": "TO",
+		"protocol": "POLYGON",
+        "excludeFromBuild": true
+	}
+}

@@ -30,7 +30,7 @@ func Test_Schemas(t *testing.T) {
 		t.Errorf("[Test_Schemas]: Failed to unmarshal testlist")
 	}
 	client := etherclient.MakeETHClient(rpcUrl)
-	schemas, _ := categorize.FetchAndWalkSchema("../schema/")
+	schemas, _ := categorize.FetchAndWalkSchema(true)
 	if len(testList) != len(schemas) {
 		fmt.Printf("[Test_Schemas]: There are %v untested schemas\n", len(schemas)-len(testList))
 	}

@@ -13,7 +13,7 @@ var listUniqueTypesCmd = &cobra.Command{
 	Use:   "list-unique-types",
 	Short: "Lists unique types and protocols",
 	Run: func(cmd *cobra.Command, args []string) {
-		schemas, _ := categorize.FetchAndWalkSchema("./../schema/")
+		schemas, _ := categorize.FetchAndWalkSchema(true)
 		typesMap := make(map[string]int)
 		protocolsMap := make(map[string]int)
 		for _, schema := range schemas {

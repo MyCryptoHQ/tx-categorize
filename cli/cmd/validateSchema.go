@@ -14,7 +14,7 @@ var validateSchemaCmd = &cobra.Command{
 	Short: "Fetches and validates schema files",
 	Run: func(cmd *cobra.Command, args []string) {
 		validate := validator.New()
-		schemas, _ := categorize.FetchAndWalkSchema("./../schema/")
+		schemas, _ := categorize.FetchAndWalkSchema(true)
 		var errOut error
 		for _, schema := range schemas {
 			err := validate.Struct(schema)
