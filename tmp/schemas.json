@@ -1,0 +1,138 @@
+{
+    "1INCH_EXCHANGE": {
+       "protocol": "1INCH",
+       "type": "EXCHANGE"
+    },
+    "AAVE_BORROW": {
+       "protocol": "AAVE",
+       "type": "BORROW"
+    },
+    "AAVE_DEPOSIT": {
+       "protocol": "AAVE",
+       "type": "DEPOSIT"
+    },
+    "AAVE_REPAY": {
+       "protocol": "AAVE",
+       "type": "REPAY"
+    },
+    "AAVE_WITHDRAW": {
+       "protocol": "AAVE",
+       "type": "WITHDRAW"
+    },
+    "COMPOUND_V2_BORROW": {
+       "protocol": "COMPOUND",
+       "type": "BORROW"
+    },
+    "COMPOUND_V2_DEPOSIT": {
+       "protocol": "COMPOUND",
+       "type": "DEPOSIT"
+    },
+    "COMPOUND_V2_REPAY": {
+       "protocol": "COMPOUND",
+       "type": "REPAY"
+    },
+    "COMPOUND_V2_WITHDRAW": {
+       "protocol": "COMPOUND",
+       "type": "WITHDRAW"
+    },
+    "DEX_AG_EXCHANGE": {
+       "protocol": "DEX_AG",
+       "type": "EXCHANGE"
+    },
+    "ERC_20_APPROVE": {
+       "protocol": "ERC_20",
+       "type": "APPROVE"
+    },
+    "ERC_20_MINT": {
+       "protocol": "ERC_20",
+       "type": "MINT"
+    },
+    "ERC_20_TRANSFER": {
+       "protocol": "ERC_20",
+       "type": "TRANSFER"
+    },
+    "ETHERMINE_MINING_PAYOUT": {
+       "protocol": "ETHERMINE",
+       "type": "MINING_PAYOUT"
+    },
+    "GNOSIS_SAFE_APPROVE_TX": {
+       "protocol": "GNOSIS_SAFE",
+       "type": "MULTISIG_APPROVE_TX"
+    },
+    "GNOSIS_SAFE_WITHDRAW": {
+       "protocol": "GNOSIS_SAFE",
+       "type": "WITHDRAW"
+    },
+    "IDEX_DEPOSIT_ETH": {
+       "protocol": "IDEX",
+       "type": "DEPOSIT_ETH"
+    },
+    "IDEX_DEPOSIT_TOKEN": {
+       "protocol": "IDEX",
+       "type": "DEPOSIT_TOKEN"
+    },
+    "IDEX_WITHDRAW": {
+       "protocol": "IDEX",
+       "type": "WITHDRAW"
+    },
+    "KYBER_EXCHANGE": {
+       "protocol": "KYBER",
+       "type": "EXCHANGE"
+    },
+    "MININGPOOLHUB_MINING_PAYOUT": {
+       "protocol": "MININGPOOLHUB",
+       "type": "MINING_PAYOUT"
+    },
+    "PARASWAP_EXCHANGE": {
+       "protocol": "PARASWAP",
+       "type": "EXCHANGE"
+    },
+    "POLYGON_BRIDGE_IN": {
+       "protocol": "POLYGON",
+       "type": "BRIDGE_IN"
+    },
+    "POLYGON_BRIDGE_OUT": {
+       "protocol": "POLYGON",
+       "type": "BRIDGE_OUT"
+    },
+    "SPARKPOOL_MINING_PAYOUT": {
+       "protocol": "SPARKPOOL",
+       "type": "MINING_PAYOUT"
+    },
+    "UNISWAP_V1_DEPOSIT": {
+       "protocol": "UNISWAP_V1",
+       "type": "DEPOSIT"
+    },
+    "UNISWAP_V1_EXCHANGE": {
+       "protocol": "UNISWAP_V1",
+       "type": "EXCHANGE"
+    },
+    "UNISWAP_V1_WITHDRAW": {
+       "protocol": "UNISWAP_V1",
+       "type": "WITHDRAW"
+    },
+    "UNISWAP_V2_DEPOSIT": {
+       "protocol": "UNISWAP_V2",
+       "type": "DEPOSIT"
+    },
+    "UNISWAP_V2_EXCHANGE": {
+       "protocol": "UNISWAP_V2",
+       "type": "EXCHANGE"
+    },
+    "UNISWAP_V2_ROUTER_TO": {
+       "protocol": "UNISWAP_V2",
+       "type": "ROUTER_TO"
+    },
+    "UNISWAP_V2_WITHDRAW": {
+       "protocol": "UNISWAP_V2",
+       "type": "WITHDRAW"
+    },
+    "WETH_UNWRAP": {
+       "protocol": "ERC_20",
+       "type": "UNWRAP"
+    },
+    "WETH_WRAP": {
+       "protocol": "ERC_20",
+       "type": "WRAP"
+    }
+ }

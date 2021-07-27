@@ -1,0 +1,692 @@
+[
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0xe2cee3f6836059820b673943853afebd9b3026125dab0d774284e6f28a4855be"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "1INCH_EXCHANGE",
+          "protocol": "1INCH",
+          "type": "EXCHANGE",
+          "priority": 40,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0x1e77446728e5558aa1b7e81e0cdab9cc1b075ba893b740600c76a315c2caa553"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "AAVE_BORROW",
+          "protocol": "AAVE",
+          "type": "BORROW",
+          "priority": 50,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0xc12c57b1c73a2c3a2ea4613e9476abb3d8d146857aab7329e24243fb59710c82"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "AAVE_DEPOSIT",
+          "protocol": "AAVE",
+          "type": "DEPOSIT",
+          "priority": 50,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0xb718f0b14f03d8c3adf35b15e3da52421b042ac879e5a689011a8b1e0036773d"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "AAVE_REPAY",
+          "protocol": "AAVE",
+          "type": "REPAY",
+          "priority": 50,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0xbd5034ffbd47e4e72a94baa2cdb74c6fad73cb3bcdc13036b72ec8306f5a7646"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "AAVE_WITHDRAW",
+          "protocol": "AAVE",
+          "type": "WITHDRAW",
+          "priority": 50,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0x13ed6866d4e1ee6da46f845c46d7e54120883d75c5ea9a2dacc1c4ca8984ab80"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "COMPOUND_V2_BORROW",
+          "protocol": "COMPOUND",
+          "type": "BORROW",
+          "priority": 50,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "logAddress",
+          "type": "addresses",
+          "addresses": [
+             "0x5d3a536e4d6dbd6114cc1ead35777bab948e3643"
+          ],
+          "topics": null,
+          "and": [
+             "ERC_20_MINT"
+          ],
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "COMPOUND_V2_DEPOSIT",
+          "protocol": "COMPOUND",
+          "type": "DEPOSIT",
+          "priority": 50,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0x1a2a22cb034d26d1854bdc6666a5b91fe25efbbb5dcad3b0355478d6f5c362a1"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "COMPOUND_V2_REPAY",
+          "protocol": "COMPOUND",
+          "type": "REPAY",
+          "priority": 50,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0xe5b754fb1abb7f01b499791d0b820ae3b6af3424ac1c59768edb53f4ec31a929"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "COMPOUND_V2_WITHDRAW",
+          "protocol": "COMPOUND",
+          "type": "WITHDRAW",
+          "priority": 50,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0x7d76860f120f877ecdc289aa48a7ccc6d0782d9fc59f154c29bc262b7f8308cc"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "DEX_AG_EXCHANGE",
+          "protocol": "DEX_AG",
+          "type": "EXCHANGE",
+          "priority": 40,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "ERC_20_APPROVE",
+          "protocol": "ERC_20",
+          "type": "APPROVE",
+          "priority": 20,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c6fef26394f4c03821c4f"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "ERC_20_MINT",
+          "protocol": "ERC_20",
+          "type": "MINT",
+          "priority": 20,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "ERC_20_TRANSFER",
+          "protocol": "ERC_20",
+          "type": "TRANSFER",
+          "priority": 20,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "from",
+          "type": "addresses",
+          "addresses": [
+             "0xea674fdde714fd979de3edf0f56aa9716b898ec8"
+          ],
+          "topics": null,
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "ETHERMINE_MINING_PAYOUT",
+          "protocol": "ETHERMINE",
+          "type": "MINING_PAYOUT",
+          "priority": 50,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0xf2a0eb156472d1440255b0d7c1e19cc07115d1051fe605b0dce69acfec884d9c"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "GNOSIS_SAFE_APPROVE_TX",
+          "protocol": "GNOSIS_SAFE",
+          "type": "MULTISIG_APPROVE_TX",
+          "priority": 60,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0x442e715f626346e8c54381002da614f62bee8d27386535b2521ec8540898556e"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "GNOSIS_SAFE_WITHDRAW",
+          "protocol": "GNOSIS_SAFE",
+          "type": "WITHDRAW",
+          "priority": 60,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0xdcbc1c05240f31ff3ad067ef1ee35ce4997762752e3a095284754544f4c709d7"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "IDEX_DEPOSIT_ETH",
+          "protocol": "IDEX",
+          "type": "DEPOSIT_ETH",
+          "priority": 40,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0xdcbc1c05240f31ff3ad067ef1ee35ce4997762752e3a095284754544f4c709d7"
+          ],
+          "and": [
+             "ERC_20_TRANSFER"
+          ],
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "IDEX_DEPOSIT_TOKEN",
+          "protocol": "IDEX",
+          "type": "DEPOSIT_TOKEN",
+          "priority": 40,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0xf341246adaac6f497bc2a656f546ab9e182111d630394f0c57c710a59a2cb567"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "IDEX_WITHDRAW",
+          "protocol": "IDEX",
+          "type": "WITHDRAW",
+          "priority": 40,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0x1849bd6a030a1bca28b83437fd3de96f3d27a5d172fa7e9c78e7b61468928a39",
+             "0x7f4091b46c33e918a0f3aa42307641d17bb67029427a5369e54b353984238705"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "KYBER_EXCHANGE",
+          "protocol": "KYBER",
+          "type": "EXCHANGE",
+          "priority": 30,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "from",
+          "type": "addresses",
+          "addresses": [
+             "0x3ecef08d0e2dad803847e052249bb4f8bff2d5bb"
+          ],
+          "topics": null,
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "MININGPOOLHUB_MINING_PAYOUT",
+          "protocol": "MININGPOOLHUB",
+          "type": "MINING_PAYOUT",
+          "priority": 50,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0x9cc2048b8af5eadff75759a3169b369efc538fb79c760fd396a4b355410b41b7"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "PARASWAP_EXCHANGE",
+          "protocol": "PARASWAP",
+          "type": "EXCHANGE",
+          "priority": 30,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "methodID",
+          "type": "methodID",
+          "addresses": null,
+          "topics": null,
+          "and": [
+             "TO_POLYGON_BRIDGE"
+          ],
+          "statuses": null,
+          "methodID": [
+             "0xe3dec8fb"
+          ]
+       },
+       "meta": {
+          "name": "POLYGON_BRIDGE_IN",
+          "protocol": "POLYGON",
+          "type": "BRIDGE_IN",
+          "priority": 30,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "methodID",
+          "type": "methodID",
+          "addresses": null,
+          "topics": null,
+          "and": [
+             "TO_POLYGON_BRIDGE"
+          ],
+          "statuses": null,
+          "methodID": [
+             "0x3805550f"
+          ]
+       },
+       "meta": {
+          "name": "POLYGON_BRIDGE_OUT",
+          "protocol": "POLYGON",
+          "type": "BRIDGE_OUT",
+          "priority": 30,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "from",
+          "type": "addresses",
+          "addresses": [
+             "0x8fd00f170fdf3772c5ebdcd90bf257316c69ba45"
+          ],
+          "topics": null,
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "SPARKPOOL_MINING_PAYOUT",
+          "protocol": "SPARKPOOL",
+          "type": "MINING_PAYOUT",
+          "priority": 50,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0x06239653922ac7bea6aa2b19dc486b9361821d37712eb796adfd38d81de278ca"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "UNISWAP_V1_DEPOSIT",
+          "protocol": "UNISWAP_V1",
+          "type": "DEPOSIT",
+          "priority": 30,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0xcd60aa75dea3072fbc07ae6d7d856b5dc5f4eee88854f5b4abf7b680ef8bc50f"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "UNISWAP_V1_EXCHANGE",
+          "protocol": "UNISWAP_V1",
+          "type": "EXCHANGE",
+          "priority": 30,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0x0fbf06c058b90cb038a618f8c2acbf6145f8b3570fd1fa56abb8f0f3f05b36e8"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "UNISWAP_V1_WITHDRAW",
+          "protocol": "UNISWAP_V1",
+          "type": "WITHDRAW",
+          "priority": 30,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0x1c411e9a96e071241c2f21f7726b17ae89e3cab4c78be50e062b03a9fffbbad1"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "UNISWAP_V2_DEPOSIT",
+          "protocol": "UNISWAP_V2",
+          "type": "DEPOSIT",
+          "priority": 30,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822",
+             "0x7f4091b46c33e918a0f3aa42307641d17bb67029427a5369e54b353984238705"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "UNISWAP_V2_EXCHANGE",
+          "protocol": "UNISWAP_V2",
+          "type": "EXCHANGE",
+          "priority": 40,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "to",
+          "type": "addresses",
+          "addresses": [
+             "0x7a250d5630b4cf539739df2c5dacb4c659f2488d"
+          ],
+          "topics": null,
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "UNISWAP_V2_ROUTER_TO",
+          "protocol": "UNISWAP_V2",
+          "type": "ROUTER_TO",
+          "priority": 10,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0x0fbf06c058b90cb038a618f8c2acbf6145f8b3570fd1fa56abb8f0f3f05b36e8"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "UNISWAP_V2_WITHDRAW",
+          "protocol": "UNISWAP_V2",
+          "type": "WITHDRAW",
+          "priority": 30,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0x7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "WETH_UNWRAP",
+          "protocol": "ERC_20",
+          "type": "UNWRAP",
+          "priority": 21,
+          "excludeFromBuild": false
+       }
+    },
+    {
+       "schema": {
+          "key": "topics",
+          "type": "topics",
+          "addresses": null,
+          "topics": [
+             "0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c"
+          ],
+          "and": null,
+          "statuses": null,
+          "methodID": null
+       },
+       "meta": {
+          "name": "WETH_WRAP",
+          "protocol": "ERC_20",
+          "type": "WRAP",
+          "priority": 21,
+          "excludeFromBuild": false
+       }
+    }
+ ]

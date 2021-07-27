@@ -22,7 +22,7 @@ type SchemaMeta struct {
 type SchemaMetaMap map[string]SchemaMeta
 
 func main() {
-	schemas, err := categorize.FetchAndWalkSchema(true)
+	schemas, err := categorize.FetchAndWalkSchema(false)
 	if err != nil {
 		fmt.Println("[buildSchemasFile]: error fetching schema", err)
 		return
@@ -44,7 +44,7 @@ func main() {
 	if err != nil {
 		fmt.Println("[buildSchemasFile]: can't write schema file", err)
 	}
-	fullSchemasFile, _ := json.MarshalIndent(fullSchemas, " ", "   ")
+	fullSchemasFile, _ := json.MarshalIndent(schemas, " ", "   ")
 	err = ioutil.WriteFile(tempFullSchemasFilePath, fullSchemasFile, 0644)
 	if err != nil {
 		fmt.Println("[buildSchemasFile]: can't write full schemas file", err)
