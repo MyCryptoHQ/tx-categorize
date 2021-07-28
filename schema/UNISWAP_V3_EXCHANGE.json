@@ -1,0 +1,18 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0xc42079f94a6350d7e6235f29174924f928cc2ac818eb64fed8004e115fbcca67"
+		]
+	},
+	"and": [
+		"UNISWAP_V3_ROUTER_TO"
+	],
+	"meta": {
+		"name": "UNISWAP_V3_EXCHANGE",
+		"priority": 40,
+		"type": "EXCHANGE",
+		"protocol": "UNISWAP_V3"
+	}
+}

@@ -46,6 +46,10 @@ func contains(a []string, x string) bool {
 func DetermineTxType(tx types.PreDeterminedStandardTx, schemaList []types.FullTxLabelSchema) (types.StandardTx, error) {
 	sortedSchemas := sortSchemaListByPriority(schemaList)
 	appliedSchemas := make(map[string]types.FullTxLabelSchema)
+	for _, log := range tx.Logs {
+		logTopic := *log
+		fmt.Println("Log topics: ", logTopic.Topics[0].String())
+	}
 	for _, schemaItem := range sortedSchemas {
 		schema := schemaItem.Schema
 		var listToUse []string
@@ -87,8 +91,18 @@ func DetermineTxType(tx types.PreDeterminedStandardTx, schemaList []types.FullTx
 	}
 
 	txTypeDerived := interpretAppliedSchemas(appliedSchemas)
-	app, _ := json.Marshal(appliedSchemas)
-	fmt.Println("Hash: ", tx.Hash, " types: ", string(app), "derived: ", txTypeDerived)
+	appliedSchemasLog := ""
+	ctr := 0
+	for _, appliedSchema := range appliedSchemas {
+		ctr++
+		if ctr == len(appliedSchemas) {
+			appliedSchemasLog += fmt.Sprintf("%s (%v)\n", appliedSchema.Meta.Name, *appliedSchema.Meta.Priority)
+		} else {
+			appliedSchemasLog += fmt.Sprintf("%s (%v), ", appliedSchema.Meta.Name, *appliedSchema.Meta.Priority)
+		}
+	}
+
+	fmt.Println("Hash: ", tx.Hash, " types: ", appliedSchemasLog, "derived: ", txTypeDerived)
 	return types.StandardTx{
 		To:               tx.To,
 		From:             tx.From,

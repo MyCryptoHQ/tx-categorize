@@ -1,0 +1,15 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0xe9e508bad6d4c3227e881ca19068f099da81b5164dd6d62b2eaf1e8bc6c34931"
+		]
+	},
+	"meta": {
+		"name": "TORNADO_CASH_V1_WITHDRAW",
+		"priority": 40,
+		"type": "WITHDRAW",
+		"protocol": "TORNADO_CASH_V1"
+	}
+}
