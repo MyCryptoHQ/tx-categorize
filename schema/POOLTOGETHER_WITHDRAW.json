@@ -1,0 +1,16 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0x0271704a58fd2953e49b87d67a0a3ce28a58147de98a5457f60b4686f6385030"
+		]
+	},
+
+	"meta": {
+		"name": "POOLTOGETHER_WITHDRAW",
+		"priority": 55,
+		"type": "WITHDRAW",
+		"protocol": "POOLTOGETHER"
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a"
+		]
+	},
+
+	"meta": {
+		"name": "BALANCER_DEPOSIT",
+		"priority": 55,
+		"type": "DEPOSIT",
+		"protocol": "BALANCER"
+	}
+}

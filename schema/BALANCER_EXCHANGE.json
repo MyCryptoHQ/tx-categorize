@@ -1,0 +1,16 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378"
+		]
+	},
+
+	"meta": {
+		"name": "BALANCER_EXCHANGE",
+		"priority": 55,
+		"type": "EXCHANGE",
+		"protocol": "BALANCER"
+	}
+}

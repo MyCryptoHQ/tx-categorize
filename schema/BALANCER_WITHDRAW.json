@@ -1,0 +1,16 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed"
+		]
+	},
+
+	"meta": {
+		"name": "BALANCER_WITHDRAW",
+		"priority": 55,
+		"type": "WITHDRAW",
+		"protocol": "BALANCER"
+	}
+}
