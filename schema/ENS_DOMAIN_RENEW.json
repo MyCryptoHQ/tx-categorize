@@ -1,0 +1,15 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0x9b87a00e30f1ac65d898f070f8a3488fe60517182d0a2098e1b4b93a54aa9bd6"
+		]
+	},
+	"meta": {
+		"name": "ENS_DOMAIN_RENEW",
+		"priority": 40,
+		"type": "DOMAIN_RENEW",
+		"protocol": "ENS"
+	}
+}
