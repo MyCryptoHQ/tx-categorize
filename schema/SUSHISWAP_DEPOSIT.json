@@ -1,0 +1,20 @@
+{
+	"schema": {
+		"key": "methodID",
+		"type": "methodID",
+		"methodID": [
+			"0xf305d719",
+			"0xe8e33700"
+		],
+		"and": [
+			"TO_SUSHISWAP_ROUTER"
+		]
+	},
+
+	"meta": {
+		"name": "SUSHISWAP_DEPOSIT",
+		"priority": 30,
+		"type": "DEPOSIT",
+		"protocol": "SUSHISWAP"
+	}
+}

@@ -4,6 +4,9 @@
 		"type": "topics",
 		"topics": [
 			"0x0fbf06c058b90cb038a618f8c2acbf6145f8b3570fd1fa56abb8f0f3f05b36e8"
+		],
+		"and": [
+			"TO_UNISWAP_V2_ROUTER"
 		]
 	},
 	"meta": {

@@ -1,0 +1,15 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0xb3d987963d01b2f68493b4bdb130988f157ea43070d4ad840fee0466ed9370d9"
+		]
+	},
+	"meta": {
+		"name": "ENS_DOMAIN_REGISTER",
+		"priority": 40,
+		"type": "DOMAIN_REGISTER",
+		"protocol": "ENS"
+	}
+}

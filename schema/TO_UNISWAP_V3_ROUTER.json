@@ -1,0 +1,16 @@
+{
+	"schema": {
+		"key": "to",
+		"type": "addresses",
+		"addresses": [
+			"0xe592427a0aece92de3edee1f18e0157c05861564",
+			"0xc36442b4a4522e871399cd717abdd847ab11fe88"
+		]
+	},
+	"meta": {
+		"name": "TO_UNISWAP_V3_ROUTER",
+		"priority": 10,
+		"type": "TO",
+		"protocol": "UNISWAP_V3"
+	}
+}

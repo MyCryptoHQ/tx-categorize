@@ -1,0 +1,19 @@
+{
+	"schema": {
+		"key": "methodID",
+		"type": "methodID",
+		"methodID": [
+			"0xded9382a",
+			"0x2195995c"
+		],
+		"and": [
+			"TO_SUSHISWAP_ROUTER"
+		]
+	},
+	"meta": {
+		"name": "SUSHISWAP_WITHDRAW",
+		"priority": 30,
+		"type": "WITHDRAW",
+		"protocol": "SUSHISWAP"
+	}
+}

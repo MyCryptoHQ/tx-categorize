@@ -5,11 +5,11 @@
 		"topics": [
 			"0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822",
 			"0x7f4091b46c33e918a0f3aa42307641d17bb67029427a5369e54b353984238705"
+		],
+		"and": [
+			"TO_UNISWAP_V2_ROUTER"
 		]
 	},
-	"and": [
-		"UNISWAP_V2_ROUTER_TO"
-	],
 	"meta": {
 		"name": "UNISWAP_V2_EXCHANGE",
 		"priority": 40,

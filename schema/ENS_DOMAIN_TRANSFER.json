@@ -1,0 +1,18 @@
+{
+	"schema": {
+		"key": "methodID",
+		"type": "methodID",
+		"methodID": [
+			"0x23b872dd"
+		],
+		"and": [
+			"TO_ENS_REGISTRAR"
+		]
+	},
+	"meta": {
+		"name": "ENS_DOMAIN_TRANSFER",
+		"priority": 40,
+		"type": "DOMAIN_TRANSFER",
+		"protocol": "ENS"
+	}
+}
