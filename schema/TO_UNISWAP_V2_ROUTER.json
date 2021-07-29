@@ -1,0 +1,16 @@
+{
+	"schema": {
+		"key": "to",
+		"type": "addresses",
+		"addresses": [
+			"0x7a250d5630b4cf539739df2c5dacb4c659f2488d"
+		]
+	},
+	"meta": {
+		"name": "TO_UNISWAP_V2_ROUTER",
+		"priority": 10,
+		"type": "TO",
+		"protocol": "UNISWAP_V2",
+        "excludeFromBuild": true
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"schema": {
+		"key": "to",
+		"type": "addresses",
+		"addresses": [
+			"0x6d19b2bf3a36a61530909ae65445a906d98a2fa8"
+		]
+	},
+	"meta": {
+		"name": "TO_BALANCER_DISTRIBUTOR",
+		"priority": 10,
+		"type": "TO",
+		"protocol": "BALANCER",
+        "excludeFromBuild": true
+	}
+}

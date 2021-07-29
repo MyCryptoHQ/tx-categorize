@@ -1,0 +1,16 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0x6ce569498e0f86f147466ac49211cb2a1ffe06195adb805e383b3f2365109160"
+		]
+	},
+
+	"meta": {
+		"name": "POOLTOGETHER_DEPOSIT",
+		"priority": 55,
+		"type": "DEPOSIT",
+		"protocol": "POOLTOGETHER"
+	}
+}

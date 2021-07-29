@@ -1,0 +1,19 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0xd8138f8a3f377c5259ca548e70e4c2de94f129f5a11036a15b69513cba2b426a"
+		],
+		"and": [
+			"TO_BALANCER_DISTRIBUTOR"
+		]
+	},
+
+	"meta": {
+		"name": "BALANCER_CLAIM",
+		"priority": 30,
+		"type": "CLAIM",
+		"protocol": "BALANCER"
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"schema": {
+		"key": "methodID",
+		"type": "methodID",
+		"methodID": [
+			"0xd9627aa4",
+			"0x6af479b2",
+			"0x3598d8ab"
+		],
+		"and": [
+			"TO_0X_EXCHANGE_PROXY"
+		]
+	},
+	"meta": {
+		"name": "0X_V3_EXCHANGE",
+		"priority": 50,
+		"type": "EXCHANGE",
+		"protocol": "0X_V3"
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"schema": {
+		"key": "to",
+		"type": "addresses",
+		"addresses": [
+			"0x1bd435f3c054b6e901b7b108a0ab7617c808677b"
+		]
+	},
+	"meta": {
+		"name": "TO_PARASWAP_V4_EXCHANGE_PROXY",
+		"priority": 20,
+		"type": "TO",
+		"protocol": "PARASWAP_V4",
+        "excludeFromBuild": true
+	}
+}

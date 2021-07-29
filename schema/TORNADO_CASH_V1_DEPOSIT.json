@@ -1,0 +1,15 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0xa945e51eec50ab98c161376f0db4cf2aeba3ec92755fe2fcd388bdbbb80ff196"
+		]
+	},
+	"meta": {
+		"name": "TORNADO_CASH_V1_DEPOSIT",
+		"priority": 40,
+		"type": "DEPOSIT",
+		"protocol": "TORNADO_CASH_V1"
+	}
+}

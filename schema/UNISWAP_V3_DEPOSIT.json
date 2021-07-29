@@ -1,0 +1,18 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0x7a53080ba414158be7ec69b987b5fb7d07dee101fe85488f0853ae16239d0bde"
+		],
+		"and": [
+			"TO_UNISWAP_V3_ROUTER"
+		]
+	},
+	"meta": {
+		"name": "UNISWAP_V3_DEPOSIT",
+		"priority": 30,
+		"type": "DEPOSIT",
+		"protocol": "UNISWAP_V3"
+	}
+}

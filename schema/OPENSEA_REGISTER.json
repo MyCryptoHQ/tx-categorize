@@ -1,0 +1,19 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0xbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b"
+		],
+		"and": [
+			"TO_OPENSEA_REGISTRY"
+		]
+	},
+
+	"meta": {
+		"name": "OPENSEA_REGISTER",
+		"priority": 30,
+		"type": "REGISTER",
+		"protocol": "OPENSEA"
+	}
+}

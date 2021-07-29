@@ -1,0 +1,18 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0x9cc2048b8af5eadff75759a3169b369efc538fb79c760fd396a4b355410b41b7"
+		],
+		"and": [
+			"TO_PARASWAP_V4_EXCHANGE_PROXY"
+		]
+	},
+	"meta": {
+		"name": "PARASWAP_V4_EXCHANGE",
+		"priority": 50,
+		"type": "EXCHANGE",
+		"protocol": "PARASWAP_V4"
+	}
+}

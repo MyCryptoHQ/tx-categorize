@@ -1,0 +1,19 @@
+{
+	"schema": {
+		"key": "methodID",
+		"type": "methodID",
+		"methodID": [
+			"0xab834bab"
+		],
+		"and": [
+			"TO_OPENSEA_ROUTER"
+		]
+	},
+
+	"meta": {
+		"name": "OPENSEA_EXCHANGE",
+		"priority": 30,
+		"type": "EXCHANGE",
+		"protocol": "OPENSEA"
+	}
+}
