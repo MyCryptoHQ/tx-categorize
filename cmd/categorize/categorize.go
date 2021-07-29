@@ -46,10 +46,6 @@ func contains(a []string, x string) bool {
 func DetermineTxType(tx types.PreDeterminedStandardTx, schemaList []types.FullTxLabelSchema) (types.StandardTx, error) {
 	sortedSchemas := sortSchemaListByPriority(schemaList)
 	appliedSchemas := make(map[string]types.FullTxLabelSchema)
-	for _, log := range tx.Logs {
-		logTopic := *log
-		fmt.Println("Log topics: ", logTopic.Topics[0].String())
-	}
 	for _, schemaItem := range sortedSchemas {
 		schema := schemaItem.Schema
 		var listToUse []string
