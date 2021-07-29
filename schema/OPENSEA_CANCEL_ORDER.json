@@ -1,0 +1,19 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0x5152abf959f6564662358c2e52b702259b78bac5ee7842a0f01937e670efcc7d"
+		],
+		"and": [
+			"TO_OPENSEA_ROUTER"
+		]
+	},
+
+	"meta": {
+		"name": "OPENSEA_CANCEL_ORDER",
+		"priority": 30,
+		"type": "CANCEL_ORDER",
+		"protocol": "OPENSEA"
+	}
+}

@@ -10,6 +10,7 @@
 		"name": "TO_UNISWAP_V2_ROUTER",
 		"priority": 10,
 		"type": "TO",
-		"protocol": "UNISWAP_V2"
+		"protocol": "UNISWAP_V2",
+        "excludeFromBuild": true
 	}
 }

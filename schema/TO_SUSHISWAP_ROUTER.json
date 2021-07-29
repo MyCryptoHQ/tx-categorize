@@ -10,6 +10,7 @@
 		"name": "TO_SUSHISWAP_ROUTER",
 		"priority": 10,
 		"type": "TO",
-		"protocol": "SUSHISWAP"
+		"protocol": "SUSHISWAP",
+        "excludeFromBuild": true
 	}
 }

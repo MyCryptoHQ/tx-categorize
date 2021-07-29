@@ -1,0 +1,18 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0xbeee1e6e7fe307ddcf84b0a16137a4430ad5e2480fc4f4a8e250ab56ccd7630d"
+		],
+		"and": [
+			"TO_METAMASK_V1_ROUTER"
+		]
+	},
+	"meta": {
+		"name": "METAMASK_V1_EXCHANGE",
+		"priority": 40,
+		"type": "EXCHANGE",
+		"protocol": "METAMASK_V1"
+	}
+}
