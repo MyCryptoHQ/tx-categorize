@@ -90,6 +90,9 @@ func DetermineTxType(tx types.PreDeterminedStandardTx, schemaList []types.FullTx
 	appliedSchemasLog := ""
 	ctr := 0
 	for _, appliedSchema := range appliedSchemas {
+		if _, ok := appliedSchemas["STANDARD"]; ok {
+			break
+		}
 		ctr++
 		schem := appliedSchema
 		applied, _ := json.Marshal(schem)
