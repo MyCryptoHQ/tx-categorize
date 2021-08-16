@@ -91,10 +91,13 @@ func DetermineTxType(tx types.PreDeterminedStandardTx, schemaList []types.FullTx
 	ctr := 0
 	for _, appliedSchema := range appliedSchemas {
 		ctr++
+		schem := appliedSchema
+		applied, _ := json.Marshal(schem)
+		fmt.Println("Hash: ", tx.Hash, " schema: ", string(applied))
 		if ctr == len(appliedSchemas) {
-			appliedSchemasLog += fmt.Sprintf("%s (%v)\n", appliedSchema.Meta.Name, *appliedSchema.Meta.Priority)
+			appliedSchemasLog += fmt.Sprintf("%s (%d)\n", appliedSchema.Meta.Name, *appliedSchema.Meta.Priority)
 		} else {
-			appliedSchemasLog += fmt.Sprintf("%s (%v), ", appliedSchema.Meta.Name, *appliedSchema.Meta.Priority)
+			appliedSchemasLog += fmt.Sprintf("%s (%d), ", appliedSchema.Meta.Name, *appliedSchema.Meta.Priority)
 		}
 	}
 
