@@ -1,0 +1,16 @@
+{
+	"schema": {
+		"key": "to",
+		"type": "addresses",
+		"addresses": [
+			"0xde3e5a990bce7fc60a6f017e7c4a95fc4939299e"
+		]
+	},
+	"meta": {
+		"name": "TO_GITCOIN_DISTRIBUTOR",
+		"priority": 10,
+		"type": "TO",
+		"protocol": "GITCOIN",
+        "excludeFromBuild": true
+	}
+}

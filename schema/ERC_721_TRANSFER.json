@@ -1,0 +1,16 @@
+{
+	"schema": {
+		"key": "methodID",
+		"type": "methodID",
+		"methodID": [
+			"0x23b872dd",
+			"0xf242432a"
+		]
+	},
+	"meta": {
+		"name": "ERC_721_TRANSFER",
+		"priority": 21,
+		"type": "TRANSFER",
+		"protocol": "ERC_721"
+	}
+}

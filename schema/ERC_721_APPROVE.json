@@ -1,0 +1,15 @@
+{
+	"schema": {
+		"key": "methodID",
+		"type": "methodID",
+		"methodID": [
+			"0xa22cb465"
+		]
+	},
+	"meta": {
+		"name": "ERC_721_APPROVE",
+		"priority": 20,
+		"type": "APPROVE",
+		"protocol": "ERC_721"
+	}
+}

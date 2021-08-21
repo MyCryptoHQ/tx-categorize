@@ -1,0 +1,15 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0x335721b01866dc23fbee8b6b2c7b1e14d6f05c28cd35a2c934239f94095602a0"
+		]
+	},
+	"meta": {
+		"name": "ENS_DOMAIN_RESOLVER_SET",
+		"priority": 30,
+		"type": "DOMAIN_RESOLVER_SET",
+		"protocol": "ENS"
+	}
+}

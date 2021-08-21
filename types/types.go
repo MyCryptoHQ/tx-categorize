@@ -87,13 +87,14 @@ type TxLabelMeta struct {
 }
 
 type TxLabelSchema struct {
-	Key       string   `json:"key" validate:"required"`
-	Type      string   `json:"type" validate:"required"`
-	Addresses []string `json:"addresses"`
-	Topics    []string `json:"topics"`
-	And       []string `json:"and"`
-	Statuses  []string `json:"statuses"`
-	MethodID  []string `json:"methodID"`
+	Key           string   `json:"key" validate:"required"`
+	IsAllRequired bool     `json:"isAllRequired"`
+	Type          string   `json:"type" validate:"required"`
+	Addresses     []string `json:"addresses"`
+	Topics        []string `json:"topics"`
+	And           []string `json:"and"`
+	Statuses      []string `json:"statuses"`
+	MethodID      []string `json:"methodID"`
 }
 
 type FullTxLabelSchema struct {
