@@ -59,7 +59,7 @@ func DetermineTxType(tx types.PreDeterminedStandardTx, schemaList []types.FullTx
 		case "methodID":
 			listToUse = schema.MethodID
 		}
-		if handleBaseKeys(tx, schema.Key, schema.IsAllRequired, listToUse) {
+		if handleBaseKeys(tx, schema.Key, schema.IsAllRequired, schema.TopicsLength, listToUse) {
 			if len(schemaItem.Schema.And) != 0 {
 				if otherRequirementsPresent(appliedSchemas, schemaItem.Schema.And) {
 					appliedSchemas[schemaItem.Meta.Name] = schemaItem
@@ -124,7 +124,7 @@ func DetermineTxType(tx types.PreDeterminedStandardTx, schemaList []types.FullTx
 	}, nil
 }
 
-func handleBaseKeys(tx types.PreDeterminedStandardTx, key string, isAllRequired bool, referenceList []string) bool {
+func handleBaseKeys(tx types.PreDeterminedStandardTx, key string, isAllRequired bool, topicsLength int, referenceList []string) bool {
 	switch key {
 	case "to":
 		return handleTo(tx, referenceList)
@@ -133,7 +133,7 @@ func handleBaseKeys(tx types.PreDeterminedStandardTx, key string, isAllRequired 
 	case "status":
 		return handleStatus(tx, referenceList)
 	case "topics":
-		return handleLogTopics(tx, referenceList, isAllRequired)
+		return handleLogTopics(tx, referenceList, isAllRequired, topicsLength)
 	case "logAddress":
 		return handleLogAddress(tx, referenceList)
 	case "methodID":
@@ -150,7 +150,7 @@ func handleFrom(tx types.PreDeterminedStandardTx, addresses []string) bool {
 	return contains(addresses, tx.From)
 }
 
-func handleLogTopics(tx types.PreDeterminedStandardTx, topics []string, isAllRequired bool) bool {
+func handleLogTopics(tx types.PreDeterminedStandardTx, topics []string, isAllRequired bool, topicsLength int) bool {
 
 	if isAllRequired {
 		fmt.Println("All is required")
@@ -164,13 +164,19 @@ func handleLogTopics(tx types.PreDeterminedStandardTx, topics []string, isAllReq
 		for _, logTopic := range log.Topics {
 
 			if contains(topics, logTopic.String()) {
-				if !isAllRequired {
+				//
+				if isAllRequired {
+					present = append(present, logTopic.String())
+					continue
+				}
+				// if topicsLength doesn't exist, or it's a valid topicsLength, return true
+				if topicsLength == 0 || topicsLength == len(log.Topics) {
 					return true
 				}
-				present = append(present, logTopic.String())
+
 			}
 		}
-		if isAllRequired && len(present) == len(topics) {
+		if isAllRequired && len(present) == len(topics) && (topicsLength == 0 || topicsLength == len(log.Topics)) {
 			return true
 		}
 	}

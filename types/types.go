@@ -90,6 +90,7 @@ type TxLabelSchema struct {
 	Key           string   `json:"key" validate:"required"`
 	IsAllRequired bool     `json:"isAllRequired"`
 	Type          string   `json:"type" validate:"required"`
+	TopicsLength  int      `json:"topicsLength"`
 	Addresses     []string `json:"addresses"`
 	Topics        []string `json:"topics"`
 	And           []string `json:"and"`
