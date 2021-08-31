@@ -1,0 +1,16 @@
+{
+	"schema": {
+		"key": "to",
+		"type": "addresses",
+		"addresses": [
+			"0x090d4613473dee047c3f2706764f49e0821d256e"
+		]
+	},
+	"meta": {
+		"name": "TO_UNISWAP_DISTRIBUTOR",
+		"priority": 10,
+		"type": "TO",
+		"protocol": "UNISWAP_V2",
+        "excludeFromBuild": true
+	}
+}

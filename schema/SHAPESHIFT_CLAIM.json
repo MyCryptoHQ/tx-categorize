@@ -1,0 +1,19 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0x528937b330082d892a98d4e428ab2dcca7844b51d227a1c0ae67f0b5261acbd9"
+		],
+		"and": [
+			"TO_FOX_DISTRIBUTOR"
+		]
+	},
+
+	"meta": {
+		"name": "SHAPESHIFT_CLAIM",
+		"priority": 30,
+		"type": "CLAIM",
+		"protocol": "SHAPESHIFT"
+	}
+}

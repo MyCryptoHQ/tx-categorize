@@ -1,0 +1,18 @@
+{
+	"schema": {
+		"key": "methodID",
+		"type": "methodID",
+		"methodID": [
+			"0x1c3db2e0"
+		],
+		"and": [
+			"TO_COMPOUND_COMPTROLLER"
+		]
+	},
+	"meta": {
+		"name": "COMPOUND_CLAIM",
+		"priority": 30,
+		"type": "CLAIM",
+		"protocol": "COMPOUND"
+	}
+}

@@ -13,7 +13,7 @@
 	"meta": {
 		"name": "OPENSEA_EXCHANGE",
 		"priority": 30,
-		"type": "EXCHANGE",
+		"type": "NFT_EXCHANGE",
 		"protocol": "OPENSEA"
 	}
 }

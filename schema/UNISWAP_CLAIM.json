@@ -1,0 +1,19 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0x4ec90e965519d92681267467f775ada5bd214aa92c0dc93d90a5e880ce9ed026"
+		],
+		"and": [
+			"TO_UNISWAP_DISTRIBUTOR"
+		]
+	},
+
+	"meta": {
+		"name": "UNISWAP_CLAIM",
+		"priority": 30,
+		"type": "CLAIM",
+		"protocol": "UNISWAP"
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0x04672052dcb6b5b19a9cc2ec1b8f447f1f5e47b5e24cfa5e4ffb640d63ca2be7"
+		],
+		"and": [
+			"TO_GITCOIN_DISTRIBUTOR"
+		]
+	},
+
+	"meta": {
+		"name": "GITCOIN_CLAIM",
+		"priority": 30,
+		"type": "CLAIM",
+		"protocol": "GITCOIN"
+	}
+}

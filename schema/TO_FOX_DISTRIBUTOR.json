@@ -1,0 +1,16 @@
+{
+	"schema": {
+		"key": "to",
+		"type": "addresses",
+		"addresses": [
+			"0xb90381dae1a72528660278100c5aa44e1108cef7"
+		]
+	},
+	"meta": {
+		"name": "TO_FOX_DISTRIBUTOR",
+		"priority": 10,
+		"type": "TO",
+		"protocol": "SHAPESHIFT",
+        "excludeFromBuild": true
+	}
+}
