@@ -12,7 +12,7 @@
 	"meta": {
 		"name": "ERC_721_MINT",
 		"priority": 22,
-		"type": "MINT",
+		"type": "NFT_MINT",
 		"protocol": "ERC_721"
 	}
 }

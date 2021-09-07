@@ -9,7 +9,7 @@
 	"meta": {
 		"name": "ERC_721_APPROVE",
 		"priority": 20,
-		"type": "APPROVE",
+		"type": "NFT_APPROVE",
 		"protocol": "ERC_721"
 	}
 }
