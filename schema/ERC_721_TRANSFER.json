@@ -11,7 +11,7 @@
 	"meta": {
 		"name": "ERC_721_TRANSFER",
 		"priority": 21,
-		"type": "TRANSFER",
+		"type": "NFT_TRANSFER",
 		"protocol": "ERC_721"
 	}
 }
