@@ -151,36 +151,32 @@ func handleFrom(tx types.PreDeterminedStandardTx, addresses []string) bool {
 }
 
 func handleLogTopics(tx types.PreDeterminedStandardTx, topics []string, isAllRequired bool, topicsLength int) bool {
-
-	if isAllRequired {
-		fmt.Println("All is required")
-		topicsRoot, _ := json.MarshalIndent(topics, " ", "   ")
-		fmt.Println(string(topicsRoot))
-		schemaRoot, _ := json.MarshalIndent(tx, " ", "   ")
-		fmt.Println(string(schemaRoot))
-	}
 	for _, log := range tx.Logs {
+		isTopicLengthSatisified := topicsLength == 0
+
 		var present []string
 		for _, logTopic := range log.Topics {
-
+			isAllSatisfied := !isAllRequired
+			isContainsSatisifed := false
 			if contains(topics, logTopic.String()) {
-				//
+				isContainsSatisifed = true
 				if isAllRequired {
 					present = append(present, logTopic.String())
-					continue
 				}
 				// if topicsLength doesn't exist, or it's a valid topicsLength, return true
 				if topicsLength == 0 || topicsLength == len(log.Topics) {
-					return true
+					isTopicLengthSatisified = true
 				}
-
+			}
+			if !isAllSatisfied {
+				isAllSatisfied = len(present) == len(topics)
+			}
+			if isAllSatisfied && isTopicLengthSatisified && isContainsSatisifed {
+				return true
 			}
 		}
-		if isAllRequired && len(present) == len(topics) && (topicsLength == 0 || topicsLength == len(log.Topics)) {
-			return true
-		}
-	}
 
+	}
 	return false
 }
 
