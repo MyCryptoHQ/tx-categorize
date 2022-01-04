@@ -229,6 +229,9 @@ func interpretAppliedSchemas(applied map[string]types.FullTxLabelSchema) string 
 			priority = *item.Meta.Priority
 		}
 	}
+	if txType == "" {
+		return "GENERIC_CONTRACT_CALL"
+	}
 	return txType
 }
 
