@@ -1,0 +1,19 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0x47cee97cb7acd717b3c0aa1435d004cd5b3c8c57d70dbceb4e4458bbd60e39d4"
+		],
+		"and": [
+			"TO_ENS_TOKEN_CONTRACT"
+		]
+	},
+
+	"meta": {
+		"name": "ENS_CLAIM",
+		"priority": 30,
+		"type": "CLAIM",
+		"protocol": "ENS"
+	}
+}
