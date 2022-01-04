@@ -1,0 +1,16 @@
+{
+	"schema": {
+		"key": "to",
+		"type": "addresses",
+		"addresses": [
+			"0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f"
+		]
+	},
+	"meta": {
+		"name": "TO_ARBITRUM_INBOX",
+		"priority": 20,
+		"type": "TO",
+		"protocol": "ARBITRUM",
+        "excludeFromBuild": true
+	}
+}
