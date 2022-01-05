@@ -1,0 +1,16 @@
+{
+	"schema": {
+		"key": "to",
+		"type": "addresses",
+		"addresses": [
+			"0x87d6180b65ad76a9443064dcd1596388fcc3ee2a"
+		]
+	},
+	"meta": {
+		"name": "TO_DAPPNODE_DISTRIBUTOR",
+		"priority": 10,
+		"type": "TO",
+		"protocol": "DAPPNODE",
+        "excludeFromBuild": true
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0xf4f04db19b64306e1859ee9cd0e9d491d4ddd5714be9c3afdbe8f1c508d5dab2"
+		],
+		"and": [
+			"TO_FUTURESWAP_GOVERNANCE"
+		]
+	},
+
+	"meta": {
+		"name": "FUTURESWAP_GOVERNANCE_VOTE",
+		"priority": 30,
+		"type": "VOTE",
+		"protocol": "FUTURESWAP"
+	}
+}

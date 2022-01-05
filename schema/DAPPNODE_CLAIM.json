@@ -1,0 +1,19 @@
+{
+	"schema": {
+		"key": "topics",
+		"type": "topics",
+		"topics": [
+			"0xce3bcb6e219596cf26007ffdfaae8953bc3f76e3f36c0a79b23e28020da3222e"
+		],
+		"and": [
+			"TO_DAPPNODE_DISTRIBUTOR"
+		]
+	},
+
+	"meta": {
+		"name": "DAPPNODE_CLAIM",
+		"priority": 30,
+		"type": "CLAIM",
+		"protocol": "DAPPNODE"
+	}
+}

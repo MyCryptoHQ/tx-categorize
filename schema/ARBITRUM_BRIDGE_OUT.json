@@ -1,0 +1,18 @@
+{
+	"schema": {
+		"key": "methodID",
+		"type": "methodID",
+		"methodID": [
+			"0x9c5cfe0b"
+		],
+        "and": [
+            "TO_ARBITRUM_OUTBOX"
+        ]
+	},
+	"meta": {
+		"name": "ARBITRUM_BRIDGE_OUT",
+		"priority": 30,
+		"type": "BRIDGE_OUT",
+		"protocol": "ARBITRUM"
+	}
+}

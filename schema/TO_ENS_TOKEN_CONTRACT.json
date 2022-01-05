@@ -1,0 +1,16 @@
+{
+	"schema": {
+		"key": "to",
+		"type": "addresses",
+		"addresses": [
+			"0xc18360217d8f7ab5e7c516566761ea12ce7f9d72"
+		]
+	},
+	"meta": {
+		"name": "TO_ENS_TOKEN_CONTRACT",
+		"priority": 10,
+		"type": "TO",
+		"protocol": "ENS",
+        "excludeFromBuild": true
+	}
+}
